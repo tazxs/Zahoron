@@ -1,0 +1,60 @@
+@import '../scss-utils/variables';
+@import '../scss-utils/mixin';
+
+.main:before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 50vw;
+    background: linear-gradient(180deg, #d4e8fd 0%, rgba(212, 232, 253, 0) 100%);
+}
+.main:after{
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    right: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 50vh;
+    background: linear-gradient(180deg, #D4E8FD 0%, rgba(212, 232, 253, 0) 100%);
+    transform: rotate(180deg);
+}
+
+.main{
+    position: relative;
+    .advantages{
+        margin-bottom: $margin-medium;
+        .adventages_content{
+            .section_title{
+                margin-bottom: $margin-small;
+            }
+            .text{
+                @include text();
+            }
+            .block_holder{
+                margin-top: $margin-xsmall6xR;
+                display: grid;
+                grid-template-columns: 16.9rem 25.1rem 24.2rem 15.7rem;
+                gap: $gap-large;
+                @include respond-to('tablet') {
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(2, 1fr);
+                    column-gap: $gap-large;
+                    row-gap: $gap-small;
+                }
+                @include respond-to('phone') {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+                .block{
+                    text-align: center;
+                    .icon{
+                        margin-bottom: $margin-xxsmall;
+                    }
+                }
+            }
+        }
+    }
+}

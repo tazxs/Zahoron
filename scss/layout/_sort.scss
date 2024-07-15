@@ -1,0 +1,35 @@
+@import "../scss-utils/mixin", "../scss-utils/variables";
+
+.sort {
+    @include flex-row-justify-end(1.7rem);
+
+    margin-bottom: $margin-regular;
+
+    & a {
+        @include text(300);
+
+        & i {
+            transition: $transition-fast;
+        }
+
+        &:hover i {
+            transform: translateY(0.1rem);
+        }
+
+        &:active i {
+            rotate: 180deg;
+        }
+    }
+}
+
+@media screen and (max-width: 834px) {
+    .sort {
+        @include flex-row-justify-start(1.7rem);
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .sort {
+        display: none;
+    }
+}

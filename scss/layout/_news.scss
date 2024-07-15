@@ -1,0 +1,104 @@
+@import "../scss-utils/variables";
+@import "../scss-utils/mixin";
+
+.main:before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 50vw;
+    background: linear-gradient(180deg, #d4e8fd 0%, rgba(212, 232, 253, 0) 100%);
+}
+.main:after {
+    content: "";
+    position: absolute;
+    bottom: -14%;
+    right: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 50vh;
+    background: linear-gradient(180deg, #d4e8fd 0%, rgba(212, 232, 253, 0) 100%);
+    transform: rotate(180deg);
+}
+.main {
+    position: relative;
+    .back {
+        a {
+            display: flex;
+            align-items: center;
+            gap: $gap-xxsmall;
+            color: $clr-black;
+            transition: $transition-fast;
+            @include text($font-size-small3x, 300, 24px);
+            &:hover {
+                color: $clr-primary-red-2;
+            }
+            &:active{
+                @include click();
+            }
+        }
+    }
+
+    .section__news{
+        margin-bottom: $gap-mediumxxx2xR;
+
+        .section_title{
+            margin-bottom: $margin-regular;
+        }
+        .text{
+            @include text();
+            br{
+                margin-bottom: $margin-xxsmall;
+            }
+        }
+    }
+    .section__consultaion{
+        margin-bottom: $gap-mediumxxx2xR;
+        .consultation_content{
+            @include flex-row-center();
+            width: 107.4rem;
+            height: 21.6rem;
+
+            background: $clr-white;
+            border-radius: $radius-xsmall;
+            box-shadow: $shadow;
+            transition: $transition-medium;
+
+            @include respond-to('tablet') {
+                width: 100%;
+            }
+            @include respond-to('phone') {
+                @include flex-column-reverse();
+                background: none;
+                box-shadow: none;
+            }
+            .content_right{
+                padding: $padding-medium6xR 19.8rem;
+                text-align: center;
+                @include respond-to('tablet') {
+                    padding: $padding-medium6xR $padding-regular6xR;
+                }
+                @include respond-to('phone'){
+                    background: $clr-white;
+                    box-shadow: $shadow;
+                    border-radius: $radius-xsmall;
+                    margin-bottom: $margin-xsmall;
+                }
+                .right_title{
+                    @include text($font-size-xmedium, 700, 24px);
+                    margin-bottom: $margin-regular3xR;
+                }
+            }
+            &:hover{
+                box-shadow: 0px 10px 50px 0px #0e529340;
+                transform: scale(1.02);
+                @include respond-to('phone') {
+                    box-shadow: none;
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}

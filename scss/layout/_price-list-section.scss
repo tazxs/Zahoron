@@ -1,0 +1,56 @@
+@import '../scss-utils/variables';
+@import '../scss-utils/mixin';
+.price-list-section{
+    .price-list-title{
+        margin-bottom: $margin-xsmall;
+        color: $clr-primary-blue;
+        font-weight: 700;
+        font-size: $font-size-xmedium;
+        text-align: center;
+    }
+    .price-list-wrap{
+        background-color: $clr-white;
+        padding: 0 2rem 3rem 3rem;
+        .price-list-block{
+            .price-list-title-block{
+                &:hover{
+                    background-color: $clr-primary-gray;
+                }
+                transition: $transition-fast;
+                background-color: $clr-primary-blue;
+                border-radius: 0.5rem 0.5rem 0 0;
+                padding: 1rem;
+                .list-title{
+                    color: $clr-white;
+                    font-weight: 700;
+                    font-size: $font-size-deflaut;
+                    text-align: center;
+                }
+            }
+            .price-list-line{
+                display: flex;
+                align-items: center;
+                border: 1px solid #000;
+                .list-num-block{
+                    border: 1px solid #000;
+                    text-align: center;
+                    padding: .6rem;
+                    width: 3rem;
+                    height: 3rem;
+                    font-weight: 700;
+                    font-size: $font-size-smallx;
+                    margin-right: $margin-xxsmall;
+                }
+                .price-ritual-text{
+                    font-weight: 500;
+                    font-size: $font-size-smallxx;
+                    transition: $transition-fast;
+                    &:hover{
+                        transform: translateX(1rem);
+                        color: $clr-primary-blue;
+                    }
+                }
+            }
+        }
+    }
+}

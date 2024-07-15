@@ -1,0 +1,59 @@
+@import '../scss-utils/variables';
+@import '../scss-utils/mixin';
+.funeral-section{
+    margin-bottom: $margin-mediumxx;
+    .funeral-title{
+        transition: $transition-fast;
+        &:hover{
+            @include textShadow();
+        }
+        color: $clr-primary-blue;
+        font-size: $font-size-xmedium;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: $margin-xsmall;
+    }
+    .funeral-general-block{
+        @include flex-sapce-bw();
+        .funeral-image{
+            width: 40%;
+            overflow: hidden;
+            border-radius: .8rem;
+            .funeral-img{
+                &:hover{
+                    animation-name: pulse;
+                    animation-duration: 2s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: linear;
+                    animation-direction: alternate;
+                }
+            }
+        }
+        .funeral-text-wrap{
+            width: 55%;
+            .funeral-text{
+                font-weight: 300;
+                font-size: $font-size-deflaut;
+                line-height: 150%;
+            }
+        }
+    }
+}
+@media (max-width:834px){
+    .funeral-section{
+        .funeral-general-block{
+            display: flex;
+            flex-direction: column;
+            .funeral-image{
+                margin-bottom: $margin-small;
+                width: 100%;
+                .funeral-img{
+                    width: 100%;
+                }
+            }
+            .funeral-text-wrap{
+                width: 100%;
+            }
+        }
+    }
+}

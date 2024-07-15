@@ -1,0 +1,60 @@
+.section-cards {
+  margin-bottom: $margin-mediumx;
+
+  .section_title {
+    @include h2-text;
+    color: $clr-primary-blue;
+    text-align: center;
+    margin-bottom: $margin-small;
+  }
+  .cards_holder.grid-2x1 {
+    @include flex-column;
+    .cards_top {
+      @include flex-space-around;
+      margin-bottom: $margin-verysmall9xR;
+      .section_card.none {
+        display: none;
+      }
+    }
+    .cards_bottom {
+      @include flex-space-around;
+    }
+  }
+}
+
+@include respond-to("tablet") {
+  .section-cards {
+    margin-bottom: $margin-medium4xR;
+
+    .cards_holder.grid-2x1 {
+      @include flex-row-start;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      padding: $padding-xxsmall;
+      .cards_top,
+      .cards_bottom {
+        @include flex-aligning;
+      }
+    }
+  }
+}
+
+
+@include respond-to("phone") {
+  .section-cards {
+    margin-bottom: $margin-small;
+
+    .cards_holder.grid-2x1 {
+      @include flex-row-center;
+      flex-direction: row;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      padding: $padding-xxsmall;
+  
+      .cards_top,
+      .cards_bottom {
+        margin-right: $margin-xsmall;
+      }
+    }
+  }
+}

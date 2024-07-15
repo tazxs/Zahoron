@@ -1,0 +1,54 @@
+@import '../scss-utils/variables';
+@import '../scss-utils/mixin';
+
+.catalog__product{
+    margin-bottom: $margin-medium;
+    &_content{
+        .section_title{
+            margin-bottom: $margin-small;
+        }
+        .text{
+            @include text();
+            margin-bottom: $margin-xxsmall;
+        }
+        .catalog_list{
+            .list-item{
+                @include text();
+                margin-bottom: $margin-xxsmall;
+                transition: $transition-fastx;
+                &:hover{
+                    transform: translateX(.7rem);
+                    color: $clr-primary-red-2;
+                }
+            }
+            .list-item::before{
+                content: '';
+                display: inline-block;
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 1.2rem;
+                height: 1.2rem;
+                margin-right: $margin-xxsmall;
+                border-radius: 50%;
+                background: $clr-primary-blue;
+                
+            }
+        }
+    }
+}
+
+.buy__product{
+    margin-bottom: $margin-regular;
+    &_content{
+        
+        .text{
+            @include text();
+            margin-top: $margin-xxsmall6xR;
+            transition: $transition-fastx;
+            &:hover{
+                color: $clr-primary-red-2;
+            }
+        }
+    }
+}

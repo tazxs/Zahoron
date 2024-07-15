@@ -1,0 +1,728 @@
+@import '../scss-utils/mixin';
+@import '../scss-utils/variables';
+
+.prices-card {
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+    text-align: center;
+
+    &:hover {
+        transform: translateY(-1rem);
+        -webkit-transform: translateY(-1rem);
+        -moz-transform: translateY(-1rem);
+        -ms-transform: translateY(-1rem);
+        -o-transform: translateY(-1rem);
+    }
+
+    @include respond-to('phone') {
+        @include flex-column-center;
+    }
+
+    .card-top {
+        @include respond-to('phone') {
+            width: 100%;
+        }
+
+        height: 9.1rem;
+
+        padding-top: $padding-xxsmall4xR;
+        background: $clr-primary-blue;
+        border-top-left-radius: $radius-small;
+        border-top-right-radius: $radius-small;
+
+        margin-bottom: $margin-regular;
+
+        .card-top_title {
+            color: $clr-white;
+            font-size: $font-size-xmedium;
+            font-weight: 700;
+        }
+
+        .card-top_text {
+            color: $clr-primary-light-blue;
+            font-size: $font-size-regular;
+            font-weight: 700;
+        }
+    }
+
+    .card-text {
+        color: $clr-black;
+        font-size: $font-size-smallxx;
+        font-weight: 300;
+        line-height: 2.4rem;
+
+        max-width: 27.8rem;
+        margin-bottom: $margin-mediumx6xR
+    }
+
+    img {
+        width: 100%;
+        height: 27rem;
+
+        margin-bottom: $margin-xsmall5xR;
+    }
+
+    .primary-red-btn {
+        display: block;
+        width: 100%;
+    }
+}
+
+.new-card {
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+
+    &:hover {
+        transform: translateY(-1rem);
+        -webkit-transform: translateY(-1rem);
+        -moz-transform: translateY(-1rem);
+        -ms-transform: translateY(-1rem);
+        -o-transform: translateY(-1rem);
+    }
+
+    &:active {
+        transform: translateY(1rem);
+        -webkit-transform: translateY(1rem);
+        -moz-transform: translateY(1rem);
+        -ms-transform: translateY(1rem);
+        -o-transform: translateY(1rem);
+    }
+
+    .card-title {
+        color: $clr-black;
+        font-size: $font-size-smallxx;
+
+        margin-bottom: $margin-verysmall8xR;
+    }
+
+    .card-btn {
+        display: inline-block;
+
+        color: $clr-black;
+        font-size: $font-size-deflaut;
+        font-weight: 700;
+        text-decoration: underline;
+
+        transition: $transition-fast;
+        -webkit-transition: $transition-fast;
+        -moz-transition: $transition-fast;
+        -ms-transition: $transition-fast;
+        -o-transition: $transition-fast;
+
+        margin-bottom: $margin-verysmall8xR;
+
+        &:hover {
+            color: $clr-primary-red;
+        }
+
+        &:active {
+            @include click;
+            color: $clr-primary-red-2;
+        }
+    }
+
+    .card-text {
+        color: $clr-black;
+        font-size: $font-size-deflaut;
+        font-weight: 300;
+
+        margin-bottom: $margin-small2xR;
+    }
+}
+
+.new-card_wrap {
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+    height: 16rem;
+
+    &:hover {
+        transform: translateX(1rem);
+        -webkit-transform: translateX(1rem);
+        -moz-transform: translateX(1rem);
+        -ms-transform: translateX(1rem);
+        -o-transform: translateX(1rem);
+    }
+
+    &:active {
+        transform: translateX(1rem) translateY(1rem);
+        -webkit-transform: translateX(1rem) translateY(1rem);
+        -moz-transform: translateX(1rem) translateY(1rem);
+        -ms-transform: translateX(1rem) translateY(1rem);
+        -o-transform: translateX(1rem) translateY(1rem);
+    }
+
+    .card-wrapper {
+        @include flex-row-start;
+        column-gap: $gap-xsmall;
+
+        .card-left {
+            img {
+                width: 28rem;
+                height: 16rem;
+            }
+        }
+
+        .card-right {
+            .card-title {
+                color: $clr-black;
+
+                margin-bottom: $margin-verysmall8xR;
+            }
+
+            .card-btn {
+                color: $clr-black;
+                font-size: $font-size-small;
+                font-weight: 700;
+
+                transition: $transition-fast;
+                -webkit-transition: $transition-fast;
+                -moz-transition: $transition-fast;
+                -ms-transition: $transition-fast;
+                -o-transition: $transition-fast;
+
+                max-width: 28rem;
+
+                &:hover {
+                    color: $clr-primary-red;
+                }
+            }
+
+            .card-text {
+                color: $clr-black;
+                font-size: $font-size-small;
+                font-weight: 300;
+                line-height: 1.6rem;
+
+                max-width: 28rem;
+            }
+        }
+    }
+}
+
+.card1 {
+    padding: $padding-xsmall7xR $padding-xsmall1xR;
+    border: 1px solid #E1E1E1;
+    border-radius: $radius-small;
+
+    .card1__title {
+        text-align: center;
+        font-weight: 700;
+        font-size: $font-size-xmedium;
+        color: $clr-primary-blue;
+        margin-bottom: $margin-medium;
+    }
+
+    .card1__subtext {
+        font-size: $font-size-deflaut;
+        font-weight: 300;
+        max-width: 53.8rem;
+    }
+
+    transition: $transition-fast;
+
+    &:hover {
+        background-color: $clr-primary-blue;
+        transform: scale(1.02);
+
+        .card1__title {
+            color: $clr-white;
+        }
+
+        .card1__subtext {
+            color: $clr-white;
+        }
+    }
+}
+
+.section_card {
+    @include flex-column-aligning;
+    @include scalingAnime;
+    width: 31.3rem;
+    height: 31.7rem;
+    border-radius: $radius-small;
+    box-shadow: $shadow;
+    padding: $padding-small;
+
+    .card-img {
+        margin-bottom: $margin-xsmall;
+    }
+
+    .card_title {
+        @include h3-text;
+        text-align: center;
+        margin-bottom: $margin-xxsmall;
+    }
+
+    .card_price {
+        @include text;
+        margin-bottom: $margin-small;
+    }
+}
+
+.section_card-hidden {
+    display: none;
+}
+
+@include respond-to("tablet") {
+    .section_card {
+        margin-right: $margin-regular;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .section_card-hidden {
+        @include flex-column-center;
+    }
+}
+
+@include respond-to("phone") {
+    .section_card {
+        margin-right: $margin-xxsmall4xR;
+        @include flex-column-center;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.prices-card {
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+    text-align: center;
+
+    &:hover {
+        transform: translateY(-1rem);
+        -webkit-transform: translateY(-1rem);
+        -moz-transform: translateY(-1rem);
+        -ms-transform: translateY(-1rem);
+        -o-transform: translateY(-1rem);
+    }
+
+    @include respond-to("phone") {
+        @include flex-column-center;
+    }
+
+    .card-top {
+        @include respond-to("phone") {
+            width: 100%;
+        }
+
+        height: 9.1rem;
+
+        padding-top: $padding-xxsmall4xR;
+        background: $clr-primary-blue;
+        border-top-left-radius: $radius-small;
+        border-top-right-radius: $radius-small;
+
+        margin-bottom: $margin-regular;
+
+        .card-top_title {
+            color: $clr-white;
+            font-size: $font-size-xmedium;
+            font-weight: 700;
+        }
+
+        .card-top_text {
+            color: $clr-primary-light-blue;
+            font-size: $font-size-regular;
+            font-weight: 700;
+        }
+    }
+
+    .card-text {
+        color: $clr-black;
+        font-size: $font-size-smallxx;
+        font-weight: 300;
+        line-height: 2.4rem;
+
+        max-width: 27.8rem;
+        margin-bottom: $margin-mediumx6xR;
+    }
+
+    img {
+        width: 100%;
+        height: 27rem;
+
+        margin-bottom: $margin-xsmall5xR;
+    }
+
+    .primary-red-btn {
+        display: block;
+        width: 100%;
+    }
+}
+
+.new-card {
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+
+    &:hover {
+        transform: translateY(-1rem);
+        -webkit-transform: translateY(-1rem);
+        -moz-transform: translateY(-1rem);
+        -ms-transform: translateY(-1rem);
+        -o-transform: translateY(-1rem);
+    }
+
+    &:active {
+        transform: translateY(1rem);
+        -webkit-transform: translateY(1rem);
+        -moz-transform: translateY(1rem);
+        -ms-transform: translateY(1rem);
+        -o-transform: translateY(1rem);
+    }
+
+    .card-title {
+        color: $clr-black;
+        font-size: $font-size-smallxx;
+
+        margin-bottom: $margin-verysmall8xR;
+    }
+
+    .card-btn {
+        display: inline-block;
+
+        color: $clr-black;
+        font-size: $font-size-deflaut;
+        font-weight: 700;
+        text-decoration: underline;
+
+        transition: $transition-fast;
+        -webkit-transition: $transition-fast;
+        -moz-transition: $transition-fast;
+        -ms-transition: $transition-fast;
+        -o-transition: $transition-fast;
+
+        margin-bottom: $margin-verysmall8xR;
+
+        &:hover {
+            color: $clr-primary-red;
+        }
+
+        &:active {
+            @include click;
+            color: $clr-primary-red-2;
+        }
+    }
+
+    .card-text {
+        color: $clr-black;
+        font-size: $font-size-deflaut;
+        font-weight: 300;
+
+        margin-bottom: $margin-small2xR;
+    }
+}
+
+.new-card_wrap {
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+    height: 16rem;
+
+    &:hover {
+        transform: translateX(1rem);
+        -webkit-transform: translateX(1rem);
+        -moz-transform: translateX(1rem);
+        -ms-transform: translateX(1rem);
+        -o-transform: translateX(1rem);
+    }
+
+    &:active {
+        transform: translateX(1rem) translateY(1rem);
+        -webkit-transform: translateX(1rem) translateY(1rem);
+        -moz-transform: translateX(1rem) translateY(1rem);
+        -ms-transform: translateX(1rem) translateY(1rem);
+        -o-transform: translateX(1rem) translateY(1rem);
+    }
+
+    .card-wrapper {
+        @include flex-row-start;
+        column-gap: $gap-xsmall;
+
+        .card-left {
+            img {
+                width: 28rem;
+                height: 16rem;
+            }
+        }
+
+        .card-right {
+            .card-title {
+                color: $clr-black;
+
+                margin-bottom: $margin-verysmall8xR;
+            }
+
+            .card-btn {
+                color: $clr-black;
+                font-size: $font-size-small;
+                font-weight: 700;
+
+                transition: $transition-fast;
+                -webkit-transition: $transition-fast;
+                -moz-transition: $transition-fast;
+                -ms-transition: $transition-fast;
+                -o-transition: $transition-fast;
+
+                max-width: 28rem;
+
+                &:hover {
+                    color: $clr-primary-red;
+                }
+            }
+
+            .card-text {
+                color: $clr-black;
+                font-size: $font-size-small;
+                font-weight: 300;
+                line-height: 1.6rem;
+
+                max-width: 28rem;
+            }
+        }
+    }
+}
+
+.cards {
+    .card-mobile {
+        display: none;
+    }
+
+    .card-tablet {
+        display: none;
+    }
+
+    .card {
+        @include flex-row();
+
+        margin-bottom: $margin-medium;
+        &__left {
+            &-title {
+                @include text(700, $font-size-regular, 2.1rem);
+
+                margin-bottom: $margin-xsmall;
+            }
+
+            .schedule {
+                display: flex;
+                gap: $gap-medium;
+
+                margin-bottom: $margin-small5xR;
+
+                & i {
+                    color: $clr-primary-blue;
+                }
+                &__left {
+                    @include flex-row-center($gap-xxsmall);
+                }
+
+                &__right {
+                    @include flex-row-center($gap-xxsmall);
+                }
+            }
+
+            .about {
+                margin-bottom: $margin-small;
+                &__text {
+                    font-weight: 300;
+                    margin-bottom: $margin-xxsmall3xR;
+                }
+            }
+        }
+    }
+}
+
+.card__right {
+    position: relative;
+    width: 100%;
+    max-width: 52rem;
+    overflow: hidden;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+
+    & img {
+        user-select: none;
+    }
+}
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    background-color: $clr-primary-black-2;
+    border-radius: 50%;
+    opacity: 0.5;
+    color: $clr-primary-gray;
+    padding: 10px;
+    user-select: none;
+}
+
+@media screen and (max-width: 834px) {
+    .cards {
+        .card-tablet {
+            display: initial;
+
+            &__title {
+                @include text(700, $font-size-regular, 2.1rem);
+                text-align: center;
+
+                margin-bottom: $margin-xsmall;
+            }
+
+            .image-wrapper {
+                display: flex;
+                gap: $gap-regular;
+                overflow-y: hidden;
+
+                margin-bottom: $margin-small3xR;
+            }
+
+            &__wrapper {
+                @include flex-row();
+
+                .schedule-tablet {
+                    margin-bottom: $margin-small5xR;
+
+                    & i {
+                        color: $clr-primary-blue;
+                    }
+
+                    &__left {
+                        @include flex-row-center($gap-xxsmall);
+                        margin-bottom: $margin-xxsmall5xR;
+                    }
+
+                    &__right {
+                        @include flex-row-center($gap-xxsmall);
+                    }
+                }
+
+                .about-tablet {
+                    &__text {
+                        margin-bottom: $margin-xxsmall3xR;
+                    }
+                }
+            }
+
+            .btn {
+                @include flex-row(center);
+            }
+        }
+
+        .card {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .cards {
+        .card {
+            display: none;
+        }
+
+        .card-tablet {
+            display: none;
+        }
+
+        .card-mobile {
+            display: initial;
+
+            &__title {
+                @include text(700, $font-size-regular, 2.1rem);
+
+                margin-bottom: $margin-xsmall;
+            }
+
+            .image-wrapper {
+                overflow-y: hidden;
+
+                display: flex;
+                gap: $gap-regular;
+
+                margin-bottom: $margin-regular;
+            }
+
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+
+            & img {
+                margin-bottom: $margin-small;
+            }
+
+            &__title {
+                @include text(700, $font-size-regular, 2.1rem);
+
+                margin-bottom: $margin-xsmall;
+            }
+
+            .schedule-mobile {
+                margin-bottom: $margin-small5xR;
+
+                & i {
+                    color: $clr-primary-blue;
+                }
+
+                &__left {
+                    @include flex-row-center($gap-xxsmall);
+                    margin-bottom: $margin-xxsmall5xR;
+                }
+
+                &__right {
+                    @include flex-row-center($gap-xxsmall);
+                }
+            }
+
+            .about-mobile {
+                &__text {
+                    margin-bottom: $margin-xxsmall3xR;
+                }
+            }
+        }
+    }
+}

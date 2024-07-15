@@ -1,0 +1,16 @@
+@import './base/reset';
+
+@import './components/modal';
+@import './components/btn';
+@import './components/card';
+
+@import './layout/header';
+@import './layout/footer';
+@import './layout/grid';
+@import './layout/about';
+@import './layout/catalog-product';
+
+@import './scss-utils/variables';
+@import './scss-utils/mixin';
+
+@import './pages/funeral-product';

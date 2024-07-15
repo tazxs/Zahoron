@@ -1,0 +1,26 @@
+@import '../base/reset';
+@import '../layout/shipping-section';
+@import '../layout/rules-section';
+@import '../layout/sending-section';
+@import '../layout/help-section';
+@import '../layout/funeral-section';
+@import '../layout/price-section';
+@import '../layout/price-list-section';
+@import '../layout/documents-section';
+@import '../layout/contacs-section';
+@import '../layout/footer';
+@import '../layout/header';
+.main{
+    .container{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+@media (max-width:834px){
+    .main{
+        .container{
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+}

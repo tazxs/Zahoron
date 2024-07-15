@@ -1,0 +1,359 @@
+@import '../scss-utils/mixin';
+@import '../scss-utils/variables';
+
+.aside {
+    width: 157rem;
+    max-width: 18rem;
+    background: $clr-primary-blue;
+    border-radius: $radius-xsmall;
+    -webkit-border-radius: $radius-xsmall;
+    -moz-border-radius: $radius-xsmall;
+    -ms-border-radius: $radius-xsmall;
+    -o-border-radius: $radius-xsmall;
+    padding: $padding-xxsmall2xR $padding-xxsmall4xR $padding-medium4xR $padding-xxsmall2xR;
+
+    .aside_top {
+        @include flex-row;
+        margin-bottom: $margin-xsmall;
+
+        .aside_top-btn {
+            color: $clr-white;
+            font-size: $font-size-regularx;
+
+            i {
+                transition: $transition-fast;
+                -webkit-transition: $transition-fast;
+                -moz-transition: $transition-fast;
+                -ms-transition: $transition-fast;
+                -o-transition: $transition-fast;
+
+                &:hover {
+                    color: $clr-primary-red;
+                }
+
+                &:active {
+                    @include click;
+                    color: $clr-primary-red-2;
+                }
+            }
+        }
+    }
+
+    .aside_profile {
+        @include flex-column-center;
+        row-gap: $gap-xxsmall4xR;
+
+        margin-bottom: $margin-mediumx;
+
+        .circle {
+            width: 5rem;
+            height: 5rem;
+            background: $clr-white;
+            border-radius: $radius-large;
+            -webkit-border-radius: $radius-large;
+            -moz-border-radius: $radius-large;
+            -ms-border-radius: $radius-large;
+            -o-border-radius: $radius-large;
+        }
+
+        .aside_title {
+            color: $clr-white;
+            font-size: $font-size-deflaut;
+            font-weight: 500;
+        }
+    }
+
+    .aside_list {
+        @include flex-column;
+        row-gap: $gap-xsmall;
+
+        margin-bottom: 12.4rem;
+
+        .aside_item {
+            .aside_link {
+                @include flex-row-center;
+                column-gap: $gap-xxsmall;
+
+                color: $clr-white;
+                font-size: $font-size-deflaut;
+                font-weight: 500;
+                opacity: 80%;
+
+                transition: $transition-fastx;
+                -webkit-transition: $transition-fastx;
+                -moz-transition: $transition-fastx;
+                -ms-transition: $transition-fastx;
+                -o-transition: $transition-fastx;
+
+                &:hover {
+                    opacity: 1;
+                    transform: scale(1.03);
+                    -webkit-transform: scale(1.03);
+                    -moz-transform: scale(1.03);
+                    -ms-transform: scale(1.03);
+                    -o-transform: scale(1.03);
+                }
+
+                &:active {
+                    @include click;
+                    color: $clr-primary-red;
+                }
+            }
+
+            .aside_link-fill {
+                font-weight: 700;
+                text-decoration: underline;
+                opacity: 1;
+            }
+        }
+    }
+
+    .aside_exit-btn {
+        color: $clr-white;
+        font-size: $font-size-deflaut;
+        transition: $transition-fastx;
+        -webkit-transition: $transition-fastx;
+        -moz-transition: $transition-fastx;
+        -ms-transition: $transition-fastx;
+        -o-transition: $transition-fastx;
+
+        &:hover {
+            color: $clr-primary-red;
+        }
+
+        &:active {
+            @include click;
+        }
+    }
+}
+
+.aside_tablet {
+    display: none;
+}
+
+.aside_phone {
+    display: none;
+}
+
+@media (max-width: 834px) {
+    .aside {
+        display: none;
+    }
+
+    .aside_tablet {
+        display: block;
+
+        .aside_top {
+            @include flex-row-center;
+            column-gap: 24.4rem;
+
+            width: 77.1rem;
+            margin-bottom: $margin-xsmall;
+
+            .aside_profile {
+                @include flex-column-center;
+                row-gap: $gap-verysmall9xR;
+
+                margin-left: 36rem;
+
+                .circle {
+                    width: 3.22rem;
+                    height: 3.22rem;
+                    background: $clr-primary-blue;
+                    border-radius: $radius-large;
+                    -webkit-border-radius: $radius-large;
+                    -moz-border-radius: $radius-large;
+                    -ms-border-radius: $radius-large;
+                    -o-border-radius: $radius-large;
+                }
+
+                .aside_title {
+                    color: $clr-black;
+                    font-weight: 500;
+                }
+            }
+
+            .aside_top-row {
+                @include flex-row-center;
+                column-gap: $gap-xxsmall3xR;
+
+                .aside_top-row__btn {
+                    color: $clr-black;
+                    font-size: $font-size-regular;
+
+                    i {
+                        transition: $transition-fast;
+                        -webkit-transition: $transition-fast;
+                        -moz-transition: $transition-fast;
+                        -ms-transition: $transition-fast;
+                        -o-transition: $transition-fast;
+
+                        &:hover {
+                            color: $clr-primary-red;
+                        }
+
+                        &:active {
+                            @include click;
+                            color: $clr-primary-red-2;
+                        }
+                    }
+                }
+            }
+        }
+
+        .aside_list {
+            @include flex-row;
+            padding: $padding-xsmall6xR $padding-verysmall6xR $padding-xsmall5xR $padding-verysmall2xR;
+            background: $clr-primary-blue;
+            border-radius: $radius-xsmall;
+            -webkit-border-radius: $radius-xsmall;
+            -moz-border-radius: $radius-xsmall;
+            -ms-border-radius: $radius-xsmall;
+            -o-border-radius: $radius-xsmall;
+
+            .aside_item {
+                .aside_link {
+                    @include flex-row-center;
+                    column-gap: $gap-xxsmall;
+
+                    color: $clr-white;
+                    font-size: $font-size-deflaut;
+                    font-weight: 500;
+                    opacity: 80%;
+
+                    transition: $transition-fastx;
+                    -webkit-transition: $transition-fastx;
+                    -moz-transition: $transition-fastx;
+                    -ms-transition: $transition-fastx;
+                    -o-transition: $transition-fastx;
+
+                    &:hover {
+                        opacity: 1;
+                        transform: scale(1.03);
+                        -webkit-transform: scale(1.03);
+                        -moz-transform: scale(1.03);
+                        -ms-transform: scale(1.03);
+                        -o-transform: scale(1.03);
+                    }
+
+                    &:active {
+                        @include click;
+                        color: $clr-primary-red;
+                    }
+                }
+
+                .aside_link-fill {
+                    font-weight: 700;
+                    text-decoration: underline;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .aside_tablet {
+        display: none;
+    }
+
+    .aside_phone {
+        display: block;
+
+        .aside_top {
+            padding: $padding-verysmall9xR $padding-xxsmall9xR $padding-xxsmall4xR $padding-xxsmall5xR;
+            background: $clr-primary-blue;
+            border-radius: $radius-xsmall;
+            -webkit-border-radius: $radius-xsmall;
+            -moz-border-radius: $radius-xsmall;
+            -ms-border-radius: $radius-xsmall;
+            -o-border-radius: $radius-xsmall;
+            width: 32.8rem;
+
+            margin-bottom: $margin-small2xR;
+
+            .aside_top-top {
+                @include flex-row;
+                margin-bottom: $margin-verysmall7xR;
+
+                .aside_top-top__left {
+                    @include flex-row-center;
+                    column-gap: $gap-xxsmall;
+                }
+
+                .aside_top-top__left-btn {
+                    color: $clr-white;
+                    font-size: $font-size-deflaut;
+
+                    i {
+                        transition: $transition-fast;
+                        -webkit-transition: $transition-fast;
+                        -moz-transition: $transition-fast;
+                        -ms-transition: $transition-fast;
+                        -o-transition: $transition-fast;
+
+                        &:hover {
+                            color: $clr-primary-red;
+                        }
+
+                        &:active {
+                            @include click;
+                            color: $clr-primary-red-2;
+                        }
+                    }
+                }
+            }
+
+            .aside_profile {
+                @include flex-aligning;
+                column-gap: $gap-verysmall9xR;
+
+                .circle {
+                    width: 3.9rem;
+                    height: 3.9rem;
+                    background: $clr-white;
+                    border-radius: $radius-large;
+                    -webkit-border-radius: $radius-large;
+                    -moz-border-radius: $radius-large;
+                    -ms-border-radius: $radius-large;
+                    -o-border-radius: $radius-large;
+                }
+
+                .aside_title {
+                    color: $clr-white;
+                    font-size: $font-size-deflaut;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .aside_list {
+            @include flex-column;
+            row-gap: $gap-xsmall;
+
+            .aside_item {
+                .aside_link {
+                    padding: $padding-xxsmall6xR $padding-xsmall;
+                    background: $clr-white;
+                    border-radius: $radius-xsmall;
+                    -webkit-border-radius: $radius-xsmall;
+                    -moz-border-radius: $radius-xsmall;
+                    -ms-border-radius: $radius-xsmall;
+                    -o-border-radius: $radius-xsmall;
+                    transition: $transition-fast;
+                    -webkit-transition: $transition-fast;
+                    -moz-transition: $transition-fast;
+                    -ms-transition: $transition-fast;
+                    -o-transition: $transition-fast;
+                    
+                    @include flex-row-center;
+                    column-gap: $gap-xxsmall;
+
+                    color: $clr-black;
+                    font-size: $font-size-deflaut;
+                    box-shadow: $shadow;
+                }
+            }
+        }
+    }
+}

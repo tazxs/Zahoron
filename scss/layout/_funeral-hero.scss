@@ -1,0 +1,65 @@
+@import "../scss-utils/mixin", "../scss-utils/variables";
+
+.hero {
+    .hero__image-2 {
+        display: none;
+    }
+
+    & img {
+        user-select: none
+    }
+
+    @include gradientAfter;
+
+    margin-bottom: $margin-medium;
+
+    position: relative;
+    & img {
+        height: 55rem;
+    }
+
+    &__content {
+        position: absolute;
+        top: 0;
+        margin-top: $margin-large;
+
+        background-color: #fff;
+        box-shadow: 0px 4px 30px 0px #1b68b226;
+        border-radius: $radius-xsmall;
+
+        max-width: 58rem;
+
+        padding: $padding-small4xR $padding-xxsmall2xR $padding-medium9xR $padding-xxsmall2xR;
+
+        .title {
+            padding-bottom: $padding-regular1xR;
+        }
+
+        &-text {
+            @include text(300, 1.6rem, 2.5rem);
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .hero {
+        &__image-1 {
+            display: none;
+        }
+
+        .hero__image-2 {
+            display: initial;
+            width: 100%;
+        }
+
+        &__content {
+            .title {
+                text-align: center;
+                padding-bottom: $padding-xxsmall;
+            }
+
+            max-width: 32.9rem;
+            padding: $padding-small 0.1rem $padding-xsmall1xR 0.8rem;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+@import "../scss-utils/mixin", "../scss-utils/variables";
+
+.when-funeral {
+    opacity: 0;
+    transform: translateY(-2rem);
+
+    margin-bottom: $margin-medium;
+
+    font-weight: 300;
+
+    border: 1px solid $clr-border;
+    padding: $padding-xsmall4xR $padding-small2xR;
+    border-radius: $radius-small;
+
+    .title {
+        text-align: center;
+        margin-bottom: $margin-xxsmall6xR;
+    }
+
+    &__text {
+        margin-bottom: $margin-xxsmall;
+    }
+
+    .when-funeral__ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    .when-funeral__li {
+        position: relative;
+        margin-bottom: $margin-xxsmall;
+
+        transition: $transition-medium;
+
+        &:hover {
+            transform: translateX(1.2rem);
+        }
+    }
+
+    .when-funeral__li::before {
+        content: url("../img/images/disc.svg");
+        position: absolute;
+        left: -2rem;
+    }
+}
+
+.when-funeral.element-show {
+    opacity: 1;
+    transition: $transition-slow;
+    transform: translateY(0);
+}

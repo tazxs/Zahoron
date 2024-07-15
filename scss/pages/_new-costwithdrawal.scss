@@ -1,0 +1,68 @@
+@import '../scss-utils/mixin';
+@import '../scss-utils/variables';
+
+.new {
+    margin-bottom: $margin-mediumxxx;
+
+    .container {
+        position: relative;
+
+        .new_title {
+            margin-bottom: $margin-regular;
+        }
+
+        .new_btn {
+            display: inline-block;
+
+            color: $clr-black;
+            font-size: $font-size-smallxx;
+            font-weight: 300;
+            text-align: right;
+
+            transition: $transition-fast;
+            -webkit-transition: $transition-fast;
+            -moz-transition: $transition-fast;
+            -ms-transition: $transition-fast;
+            -o-transition: $transition-fast;
+
+            margin-bottom: $margin-xsmall;
+
+            position: absolute;
+            top: 2.93rem;
+            right: 0;
+
+            &:hover {
+                color: $clr-primary-red;
+            }
+
+            &:active {
+                color: $clr-primary-red-2;
+            }
+        }
+
+        .new_grid {
+            column-gap: $gap-xsmall;
+
+            .new_grid-right {
+                @include flex-column;
+                row-gap: $gap-xxsmall3xR;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .new {
+        margin-bottom: $margin-medium6xR;
+
+        .container {
+            .new_grid {
+                grid-template-columns: 1fr;
+
+                .new-card_wrap {
+                    display: none;
+                }
+            }
+        }
+    }
+}

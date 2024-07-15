@@ -1,0 +1,43 @@
+@import '../scss-utils/mixin';
+@import '../scss-utils/variables';
+.rules-section{
+    .rules-wrap{
+        border: 1px solid #e9e9e9;
+        border-radius: 1rem;
+        padding: $padding-xsmall;
+        margin-bottom: $margin-medium;
+        &:active{
+            animation-name: pulse;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+        }
+        .rules-title{
+            color: $clr-primary-blue;
+            text-align: center;
+            font-size: $font-size-xmedium;
+            font-weight: 700;
+            margin-bottom: $margin-xxsmall;
+        }
+        .rules-text{
+            font-weight: 300;
+            font-size: $font-size-deflaut;
+            line-height: 156%;
+        }
+        ul{
+            margin-left: $margin-xsmall;
+            margin-bottom: $margin-xxsmall;
+            .rules-li{
+                font-weight: 500;
+                font-size: $font-size-deflaut;
+                list-style: disc;
+                transition: $transition-fast;
+                &:hover{
+                    transform: translateX(1rem);
+                    color: $clr-primary-blue;
+                }
+            }
+        }
+    }
+}

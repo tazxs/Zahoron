@@ -1,0 +1,137 @@
+@import '../scss-utils/mixin';
+@import '../scss-utils/variables';
+.shipping-section{
+    background: url(../img/images/transportent__diffrent__city.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: $padding-xxsmall;
+    margin-bottom: $margin-small;
+    .shipping-general-block{
+        border: 1px solid #9e9e9e;
+        border-radius: .5rem;
+        padding: $padding-medium $padding-mediumx;
+        @include flex-sapce-bw();
+        .shipping-text-block{
+            width: 45%;
+        .shipping-title{
+            font-size: $font-size-xmedium;
+            font-weight: 700;
+            color: $clr-white;
+            margin-bottom: $margin-xsmall;
+            transition: $transition-fast;
+            @include textShadow();
+        }
+        .shipping-text{
+            color: $clr-white;
+            font-size: $font-size-deflaut;
+        }
+        }
+        .shipping-city-block{
+            width: 45%;
+            .inputs-wrap{   
+                margin-bottom: $margin-small;
+                padding: $padding-xsmall;
+                border: 1px solid $clr-white;
+                border-radius: .5rem;
+                backdrop-filter: blur(15px);
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+                .shipping-input-block{
+                    margin-bottom: $margin-xsmall;
+                    .city-input-title{
+                        color: $clr-white;
+                        font-weight: 700;
+                        font-size: $font-size-smallxx;
+                        margin-bottom: $margin-xxsmall;
+                    }
+                    .shipping-input{
+                        background: rgba(255, 255, 255, 0.3);
+                        border: 1px solid rgba(255, 255, 255, 0.2);
+                        padding: 1.5rem;
+                        border-radius: 0.5rem;
+                        width: 100%;
+                        transition: $transition-fast;
+                        &::placeholder{
+                            color: $clr-white;
+                            font-size: $font-size-smallxx;
+                        }
+                        &:active{
+                            transform: scale(.95);
+                            color: $clr-primary-red;
+                        }
+                    }
+                }
+                .shipping-button{
+                    width: 18.6rem;
+                    margin: 0 auto;
+                    padding: 1rem;
+                    margin-top: 4rem;
+                    margin-bottom: 2rem;
+                    .shipping-btn{
+                        margin-top: $margin-regular;
+                        color: $clr-white;
+                        font-weight: 700;
+                        font-size: $font-size-smallx;
+                        background-color: $clr-primary-red;
+                        padding: $padding-xsmall 2rem;
+                        border-radius: 0.5rem;
+                    }
+                    animation-name: pulse;
+                    animation-duration: 2s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: ease-in-out;
+                    animation-direction: alternate;
+                    &:hover{
+                        animation-name: elastic;
+                        animation-duration: 1.5s;
+                    }
+                }
+            }
+            .shipping-check-block{
+                display: flex;
+                
+                .check-block{
+                    margin-right: $margin-xxsmall;
+                }
+                .check-text{
+                    color: $clr-white;
+                    font-size: 1.3rem;
+                    line-height: 150%;
+                }
+            }
+        }
+    }
+}
+@media (max-width:834px) {
+    .container{
+        width: 100%;
+        .shipping-section{
+            .shipping-general-block{
+                padding: $padding-xsmall;
+                display: flex;
+                flex-direction: column;
+                .shipping-text-block{
+                    width: 100%;
+                    margin-bottom: $margin-small;
+                }
+                .shipping-city-block{
+                    width: 70%;
+                    margin: 0 auto;
+                    .inputs-wrap{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:488px){
+    .container{
+        .shipping-section{
+            .shipping-general-block{
+                .shipping-city-block{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+@import '../scss-utils/mixin';
+@import '../scss-utils/variables';
+
+.modal {
+    position: absolute;
+    z-index: 1000;
+
+    right: 3.2rem;
+    top: 3.3rem;
+
+    background: $clr-primary-blue;
+    padding-top: $padding-small2xR;
+    padding-left: $padding-xsmall8xR;
+
+    width: 37.5rem;
+    height: 47.3rem;
+
+    @include respond-to('phone') {
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    .modal_content {
+        .modal_menu {
+            @include flex-column;
+            row-gap: $gap-xxsmall5xR;
+
+            .modal_item {
+                .modal_link {
+                    color: $clr-white;
+                    font-size: $font-size-deflaut;
+                    font-weight: 500;
+                    transition: $transition-fast;
+                    -webkit-transition: $transition-fast;
+                    -moz-transition: $transition-fast;
+                    -ms-transition: $transition-fast;
+                    -o-transition: $transition-fast;
+
+                    &:hover {
+                        color: $clr-primary-red;
+                    }
+
+                    &:active {
+                        @include click;
+                        color: $clr-primary-red-2;
+                    }
+                }
+            }
+        }
+    }
+}

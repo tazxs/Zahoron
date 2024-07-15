@@ -1,0 +1,72 @@
+.section-advantages {
+  border: 1px solid $clr-border;
+  border-radius: $radius-small;
+  margin-bottom: $margin-medium;
+  padding: $padding-xsmall4xR;
+
+  .section_title {
+    @include h2-text;
+    color: $clr-primary-blue;
+    text-align: center;
+    margin-bottom: $margin-xxsmall6xR;
+  }
+
+  .section_text {
+    @include text;
+    margin-bottom: $margin-xxsmall;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .section_list {
+    margin-bottom: $margin-xxsmall;
+    .section_item {
+      @include text;
+      position: relative;
+      margin-bottom: $margin-xxsmall;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        left: 0;
+        top: 25%;
+        margin-right: $margin-xxsmall;
+        width: 1.2rem;
+        height: 1.2rem;
+        background-color: $clr-primary-blue;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+@include respond-to("tablet") {
+  .section-advantages {
+    margin-bottom: $margin-small;
+
+    .section_text {
+      width: 74.5rem;
+    }
+  }
+}
+
+
+@include respond-to("phone") {
+  .section-advantages {
+    margin-bottom: $margin-small;
+    .section_title {
+      width: 31.274rem;
+    }
+
+    .section_text {
+      width: 31.2rem;
+    }
+
+    .section_list {
+      .section_item {
+        width: 25.3rem;
+      }
+    }
+  }
+}

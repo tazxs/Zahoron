@@ -1,0 +1,32 @@
+@import '../scss-utils/mixin';
+@import '../scss-utils/variables';
+.hero {
+    .hero_title {
+        color: $clr-black;
+        font-size: $font-size-deflaut;
+        font-weight: 700;
+
+        margin-bottom: $margin-xsmall1xR;
+    }
+
+    .hero_text {
+        color: $clr-black;
+        font-size: $font-size-deflaut;
+
+        margin-bottom: $margin-small9xR;
+    }
+
+    .hero_table {
+        @include flex-wrap;
+        .hero_element {
+            width: 15.7rem;
+            height: 4.7rem;
+            border: 0.1rem solid $clr-primary-blue;
+            @include flex-aligning;
+
+            color: $clr-black;
+            font-size: $font-size-deflaut;
+            
+        }
+    }
+}

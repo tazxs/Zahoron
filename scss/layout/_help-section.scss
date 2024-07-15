@@ -1,0 +1,17 @@
+@import '../scss-utils/mixin';
+@import '../scss-utils/variables';
+.help-section{
+    padding: $padding-xsmall;
+    .rules-title{
+        color: $clr-primary-blue;
+        text-align: center;
+        font-size: $font-size-xmedium;
+        font-weight: 700;
+        margin-bottom: $margin-xxsmall;
+    }
+    .rules-text{
+        font-weight: 300;
+        font-size: $font-size-deflaut;
+        line-height: 156%;
+    }
+}

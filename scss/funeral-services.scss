@@ -1,0 +1,15 @@
+@import "./base/reset";
+@import "./scss-utils/mixin";
+@import "./scss-utils/variables";
+@import "./components/btn";
+@import "./components/card";
+@import "./layout/grid";
+
+@import "./pages/funeral-services";
+@import "./pages/available-services";
+@import "./pages/advantages";
+@import "./pages/section-cards";
+@import "./pages/section-order";
+
+@import "./layout/header";
+@import "./layout/footer";

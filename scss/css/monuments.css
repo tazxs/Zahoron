@@ -1,0 +1,371 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.container {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 834px) {
+  .container {
+    max-width: 770px;
+  }
+}
+@media (max-width: 375px) {
+  .container {
+    max-width: 358px;
+  }
+}
+
+.container_holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-column-gap: 2rem;
+     -moz-column-gap: 2rem;
+          column-gap: 2rem;
+}
+@media (max-width: 834px) {
+  .container_holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 3.7rem;
+  }
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+}
+
+.title {
+  color: #1B68B2;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.main {
+  background: -webkit-gradient(linear, left top, left bottom, from(#D4E8FD), to(rgba(212, 232, 253, 0)));
+  background: linear-gradient(180deg, #D4E8FD 0%, rgba(212, 232, 253, 0) 100%);
+  padding-top: 5rem;
+}
+.main .container .prelainding {
+  background-image: url(/img/images/coffins__layout.png);
+  background-repeat: no-repeat;
+}
+.main .container .prelainding .prelainding__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.8rem 1.4rem;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+.main .container .prelainding .prelainding__wrapper .prelainding__title-none {
+  text-align: center;
+  display: none;
+}
+.main .container .prelainding .prelainding__wrapper .prelainding__title-none .none__title-item {
+  font-weight: 700;
+  font-size: 3rem;
+  color: #fff;
+}
+.main .container .prelainding .prelainding__wrapper .prelainding__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 9rem 0 10rem 7.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 3.2rem;
+  border-radius: 0.5rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.main .container .prelainding .prelainding__wrapper .prelainding__left .left__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.main .container .prelainding .prelainding__wrapper .prelainding__left .left__form label {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+.main .container .prelainding .prelainding__wrapper .prelainding__left .left__form select {
+  padding: 1.5rem 2.4rem;
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  width: 33.2rem;
+  margin-bottom: 3rem;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  background-color: #363636;
+}
+.main .container .prelainding .prelainding__wrapper .prelainding__left .left__form select:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+.main .container .prelainding .prelainding__wrapper .prelainding__right .prelainding__right-title {
+  max-width: 44.7rem;
+}
+.main .container .prelainding .prelainding__wrapper .prelainding__right .prelainding__right-title .right__title-item {
+  font-weight: 700;
+  font-size: 3rem;
+  color: #fff;
+}
+.main .container .reminder {
+  background-color: #1B68B2;
+  padding: 5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 5rem;
+}
+.main .container .reminder .reminder__title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.main .container .reminder .reminder__title .reminder__title-item {
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+.main .container .reminder .reminder__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 4rem;
+}
+.main .container .reminder .reminder__wrapper .remider__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+.main .container .reminder .reminder__wrapper .remider__card .reminder__card-title .card__title-item {
+  font-size: 1.6rem;
+  text-align: center;
+  max-width: 21.5rem;
+  color: #fff;
+}
+.main .container .reminder .reminder__wrapper .remider__card:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+.main .container .reminder__blocks .reminder__block {
+  padding: 2.7rem 3.1rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 1rem;
+  margin-bottom: 5rem;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+.main .container .reminder__blocks .reminder__block .reminder__block-title {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.main .container .reminder__blocks .reminder__block .reminder__block-title .block__title-item {
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #1B68B2;
+}
+.main .container .reminder__blocks .reminder__block .riminder__block-subtext .block__subtext-item {
+  font-size: 300;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+.main .container .reminder__blocks .reminder__block:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  background-color: #1B68B2;
+}
+.main .container .reminder__blocks .reminder__block:hover .reminder__block-title .block__title-item {
+  color: #fff;
+}
+.main .container .reminder__blocks .reminder__block:hover .riminder__block-subtext .block__subtext-item {
+  color: #fff;
+}
+.main .container .cofins__stages {
+  margin-bottom: 6.9rem;
+}
+.main .container .cofins__stages .cofins__stages-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  place-items: center;
+}
+.main .container .cofins__stages .cofins__stages-wrapper .coffin__stage {
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+.main .container .cofins__stages .cofins__stages-wrapper .coffin__stage:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+.main .container .cofins__example .coffins__example-wrapper {
+  margin-bottom: 12.1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+.main .container .cofins__example .coffins__example-wrapper .coffin__stage {
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+.main .container .cofins__example .coffins__example-wrapper .coffin__stage:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+.main .container .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.2rem;
+  margin-bottom: 6.9rem;
+}
+.main .container .cards__holeder-end {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 2.2rem;
+  margin-bottom: 6.9rem;
+}
+.main .container .laiding__end .laiding__end-wrapper .laiding__end-title {
+  text-align: center;
+}
+.main .container .laiding__end .laiding__end-wrapper .laiding__end-title .end__title-item {
+  font-weight: 700;
+  font-size: 3rem;
+  color: #1B68B2;
+}
+.main .container .laiding__end .laiding__end-wrapper .laiding__end-subtext {
+  text-align: center;
+}
+.main .container .laiding__end .laiding__end-wrapper .laiding__end-subtext .end__subtext-item {
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+
+@media (max-width: 768px) {
+  .main .container .prelainding {
+    background-size: cover;
+    margin-bottom: 5rem;
+    border-radius: 0.5rem;
+  }
+  .main .container .prelainding .prelainding__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main .container .prelainding .prelainding__wrapper .prelainding__title-none {
+    display: block;
+  }
+  .main .container .prelainding .prelainding__wrapper .prelainding__left {
+    margin: 9rem auto;
+  }
+  .main .container .prelainding .prelainding__wrapper .prelainding__right {
+    display: none;
+  }
+  .main .container .cards__holeder-end {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .main .container .cofins__example {
+    margin: auto;
+    max-width: 960px;
+  }
+  .main .container .cofins__example .coffins__example-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow-x: scroll;
+    white-space: nowrap;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .main .container .cofins__example .coffins__example-wrapper .coffin__stage {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+  .main .container .cofins__stages {
+    margin: auto;
+    max-width: 960px;
+    margin-bottom: 5rem;
+  }
+  .main .container .cofins__stages .cofins__stages-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow-x: scroll;
+    white-space: nowrap;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .main .container .cofins__stages .cofins__stages-wrapper .coffin__stage {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+}
+@media (max-width: 375px) {
+  .main .container .prelainding .prelainding__wrapper .prelainding__left .left__form select {
+    width: 100%;
+  }
+  .main .container .reminder .reminder__wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .main .container .cofins__example {
+    place-items: center;
+  }
+}

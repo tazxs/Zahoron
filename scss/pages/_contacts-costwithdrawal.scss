@@ -1,0 +1,68 @@
+@import '../scss-utils/mixin';
+@import '../scss-utils/variables';
+
+.contacts {
+    position: relative;
+    margin-bottom: $margin-mediumxxx;
+
+    @include respond-to('phone') {
+        margin-bottom: $margin-medium;
+    }
+
+    .container {
+        .contacts_title {
+            margin-bottom: $margin-small4xR;
+        }
+
+        .contacts_wrapper {
+            @include flex-row-start;
+            column-gap: $gap-xsmall;
+
+            @include respond-to('tablet') {
+                @include flex-column;
+                row-gap: $gap-xxsmall5xR;
+            }
+
+            .contacts_left {
+                .contacts_row {
+                    @include flex-row-start;
+
+                    &:first-child {
+                        column-gap: $gap-xsmall1xR;
+                        margin-bottom: $margin-small1xR;
+
+                        .contacts_row-right {
+                            row-gap: $gap-xxsmall6xR;
+                        }
+                    }
+
+                    &:last-child {
+                        column-gap: $gap-verysmall6xR;
+
+                        .contacts_row-right {
+                            row-gap: $gap-xxsmall2xR;
+                        }
+                    }
+
+                    .contacts_row-title {
+                        color: $clr-black;
+                        font-size: $font-size-deflaut;
+                        font-weight: 700;
+                    }
+
+                    .contacts_row-right {
+                        @include flex-column;
+
+                        .contacts_text {
+                            color: $clr-black;
+                            font-size: $font-size-deflaut;
+                            line-height: 1.95rem;
+
+                            max-width: 27.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

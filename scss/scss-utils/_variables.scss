@@ -1,0 +1,390 @@
+@import './mixin';
+//*Если добавляете новую переменную то пишите //! Например: $clr-white: #fff //!
+
+//*Colors
+$clr-black: #000;
+$clr-white: #fff;
+
+$clr-primary-black: #363636;
+$clr-primary-black-2: #2C2C2C;
+$clr-primary-gray:#ADADAD;
+$clr-primary-gray-2:#a19e9e; //!
+$clr-primary-red:#ED2A54;
+$clr-primary-red-2:#ca1f44; //!
+$clr-primary-blue: #1B68B2;
+$clr-primary-blue-2: #2479CA; //!
+$clr-primary-light-blue: #B7DCFF;
+
+$clr-border: #E1E1E1; //!
+
+//*Margin
+$margin-verysmall: 0.1rem;
+$margin-verysmall2xR: 0.2rem;
+$margin-verysmall3xR: 0.3rem;
+$margin-verysmall4xR: 0.4rem;
+$margin-verysmall5xR: 0.5rem;
+$margin-verysmall6xR: 0.6rem;
+$margin-verysmall7xR: 0.7rem;
+$margin-verysmall8xR: 0.8rem;
+$margin-verysmall9xR: 0.9rem;
+$margin-xxsmall: 1rem;
+$margin-xxsmall1xR: 1.1rem;
+$margin-xxsmall2xR: 1.2rem;
+$margin-xxsmall3xR: 1.3rem;
+$margin-xxsmall4xR: 1.4rem;
+$margin-xxsmall5xR: 1.5rem;
+$margin-xxsmall6xR: 1.6rem;
+$margin-xxsmall7xR: 1.7rem;
+$margin-xxsmall8xR: 1.8rem;
+$margin-xxsmall9xR: 1.9rem;
+$margin-xsmall: 2rem;
+$margin-xsmall1xR: 2.1rem;
+$margin-xsmall2xR: 2.2rem;
+$margin-xsmall3xR: 2.3rem;
+$margin-xsmall4xR: 2.4rem;
+$margin-xsmall5xR: 2.5rem;
+$margin-xsmall6xR: 2.6rem;
+$margin-xsmall7xR: 2.7rem;
+$margin-xsmall8xR: 2.8rem;
+$margin-xsmall9xR: 2.9rem;
+$margin-small: 3rem;
+$margin-small1xR: 3.1rem;
+$margin-small2xR: 3.2rem;
+$margin-small3xR: 3.3rem;
+$margin-small4xR: 3.4rem;
+$margin-small5xR: 3.5rem;
+$margin-small6xR: 3.6rem;
+$margin-small7xR: 3.7rem;
+$margin-small8xR: 3.8rem;
+$margin-small9xR: 3.9rem;
+$margin-regular: 4rem;
+$margin-regular1xR: 4.1rem;
+$margin-regular2xR: 4.2rem;
+$margin-regular3xR: 4.3rem;
+$margin-regular4xR: 4.4rem;
+$margin-regular5xR: 4.5rem;
+$margin-regular6xR: 4.6rem;
+$margin-regular7xR: 4.7rem;
+$margin-regular8xR: 4.8rem;
+$margin-regular9xR: 4.9rem;
+$margin-medium: 5rem;
+$margin-medium2: 5rem;
+$margin-medium1xR: 5.1rem;
+$margin-medium2xR: 5.2rem;
+$margin-medium3xR: 5.3rem;
+$margin-medium4xR: 5.4rem;
+$margin-medium5xR: 5.5rem;
+$margin-medium6xR: 5.6rem;
+$margin-medium7xR: 5.7rem;
+$margin-medium8xR: 5.8rem;
+$margin-medium9xR: 5.9rem;
+$margin-mediumx: 6rem;
+$margin-mediumx1xR: 6.1rem;
+$margin-mediumx2xR: 6.2rem;
+$margin-mediumx3xR: 6.3rem;
+$margin-mediumx4xR: 6.4rem;
+$margin-mediumx5xR: 6.5rem;
+$margin-mediumx6xR: 6.6rem;
+$margin-mediumx7xR: 6.7rem;
+$margin-mediumx8xR: 6.8rem;
+$margin-mediumx9xR: 6.9rem;
+$margin-mediumxx: 7rem;
+$margin-mediumxx1xR: 7.1rem;
+$margin-mediumxx2xR: 7.2rem;
+$margin-mediumxx3xR: 7.3rem;
+$margin-mediumxx4xR: 7.4rem;
+$margin-mediumxx5xR: 7.5rem;
+$margin-mediumxx6xR: 7.6rem;
+$margin-mediumxx7xR: 7.7rem;
+$margin-mediumxx8xR: 7.8rem;
+$margin-mediumxx9xR: 7.9rem;
+$margin-mediumxxx: 8rem;
+$margin-mediumxxx1xR: 8.1rem;
+$margin-mediumxxx2xR: 8.2rem;
+$margin-mediumxxx3xR: 8.3rem;
+$margin-mediumxxx4xR: 8.4rem;
+$margin-mediumxxx5xR: 8.5rem;
+$margin-mediumxxx6xR: 8.6rem;
+$margin-mediumxxx7xR: 8.7rem;
+$margin-mediumxxx8xR: 8.8rem;
+$margin-mediumxxx9xR: 8.9rem;
+$margin-large: 10rem;
+
+//*Padding
+$padding-verysmall: 0.1rem;
+$padding-verysmall2xR: 0.2rem;
+$padding-verysmall3xR: 0.3rem;
+$padding-verysmall4xR: 0.4rem;
+$padding-verysmall5xR: 0.5rem;
+$padding-verysmall6xR: 0.6rem;
+$padding-verysmall7xR: 0.7rem;
+$padding-verysmall8xR: 0.8rem;
+$padding-verysmall9xR: 0.9rem;
+$padding-xxsmall: 1rem;
+$padding-xxsmall1xR: 1.1rem;
+$padding-xxsmall2xR: 1.2rem;
+$padding-xxsmall3xR: 1.3rem;
+$padding-xxsmall4xR: 1.4rem;
+$padding-xxsmall5xR: 1.5rem;
+$padding-xxsmall6xR: 1.6rem;
+$padding-xxsmall7xR: 1.7rem;
+$padding-xxsmall8xR: 1.8rem;
+$padding-xxsmall9xR: 1.9rem;
+$padding-xsmall: 2rem;
+$padding-xsmall1xR: 2.1rem;
+$padding-xsmall2xR: 2.2rem;
+$padding-xsmall3xR: 2.3rem;
+$padding-xsmall4xR: 2.4rem;
+$padding-xsmall5xR: 2.5rem;
+$padding-xsmall6xR: 2.6rem;
+$padding-xsmall7xR: 2.7rem;
+$padding-xsmall8xR: 2.8rem;
+$padding-xsmall9xR: 2.9rem;
+$padding-small: 3rem;
+$padding-small1xR: 3.1rem;
+$padding-small2xR: 3.2rem;
+$padding-small3xR: 3.3rem;
+$padding-small4xR: 3.4rem;
+$padding-small5xR: 3.5rem;
+$padding-small6xR: 3.6rem;
+$padding-small7xR: 3.7rem;
+$padding-small8xR: 3.8rem;
+$padding-small9xR: 3.9rem;
+$padding-regular: 4rem;
+$padding-regular1xR: 4.1rem;
+$padding-regular2xR: 4.2rem;
+$padding-regular3xR: 4.3rem;
+$padding-regular4xR: 4.4rem;
+$padding-regular5xR: 4.5rem;
+$padding-regular6xR: 4.6rem;
+$padding-regular7xR: 4.7rem;
+$padding-regular8xR: 4.8rem;
+$padding-regular9xR: 4.9rem;
+$padding-medium: 5rem;
+$padding-medium1xR: 5.1rem;
+$padding-medium2xR: 5.2rem;
+$padding-medium3xR: 5.3rem;
+$padding-medium4xR: 5.4rem;
+$padding-medium5xR: 5.5rem;
+$padding-medium6xR: 5.6rem;
+$padding-medium7xR: 5.7rem;
+$padding-medium8xR: 5.8rem;
+$padding-medium9xR: 5.9rem;
+$padding-mediumx: 6rem;
+$padding-mediumx1xR: 6.1rem;
+$padding-mediumx2xR: 6.2rem;
+$padding-mediumx3xR: 6.3rem;
+$padding-mediumx4xR: 6.4rem;
+$padding-mediumx5xR: 6.5rem;
+$padding-mediumx6xR: 6.6rem;
+$padding-mediumx7xR: 6.7rem;
+$padding-mediumx8xR: 6.8rem;
+$padding-mediumx9xR: 6.9rem;
+$padding-mediumxx: 7rem;
+$padding-mediumxx1xR: 7.1rem;
+$padding-mediumxx2xR: 7.2rem;
+$padding-mediumxx3xR: 7.3rem;
+$padding-mediumxx4xR: 7.4rem;
+$padding-mediumxx5xR: 7.5rem;
+$padding-mediumxx6xR: 7.6rem;
+$padding-mediumxx7xR: 7.7rem;
+$padding-mediumxx8xR: 7.8rem;
+$padding-mediumxx9xR: 7.9rem;
+$padding-mediumxxx: 8rem;
+$padding-mediumxxx1xR: 8.1rem;
+$padding-mediumxxx2xR: 8.2rem;
+$padding-mediumxxx3xR: 8.3rem;
+$padding-mediumxxx4xR: 8.4rem;
+$padding-mediumxxx5xR: 8.5rem;
+$padding-mediumxxx6xR: 8.6rem;
+$padding-mediumxxx7xR: 8.7rem;
+$padding-mediumxxx8xR: 8.8rem;
+$padding-mediumxxx9xR: 8.9rem;
+$padding-large: 10rem;
+$padding-largex: 11rem;
+
+//*Gap
+$gap-verysmall: 0.1rem;
+$gap-verysmall2xR: 0.2rem;
+$gap-verysmall3xR: 0.3rem;
+$gap-verysmall4xR: 0.4rem;
+$gap-verysmall5xR: 0.5rem;
+$gap-verysmall6xR: 0.6rem;
+$gap-verysmall7xR: 0.7rem;
+$gap-verysmall8xR: 0.8rem;
+$gap-verysmall9xR: 0.9rem;
+$gap-xxsmall: 1rem;
+$gap-xxsmall1xR: 1.1rem;
+$gap-xxsmall2xR: 1.2rem;
+$gap-xxsmall3xR: 1.3rem;
+$gap-xxsmall4xR: 1.4rem;
+$gap-xxsmall5xR: 1.5rem;
+$gap-xxsmall6xR: 1.6rem;
+$gap-xxsmall7xR: 1.7rem;
+$gap-xxsmall8xR: 1.8rem;
+$gap-xxsmall9xR: 1.9rem;
+$gap-xsmall: 2rem;
+$gap-xsmall1xR: 2.1rem;
+$gap-xsmall2xR: 2.2rem;
+$gap-xsmall3xR: 2.3rem;
+$gap-xsmall4xR: 2.4rem;
+$gap-xsmall5xR: 2.5rem;
+$gap-xsmall6xR: 2.6rem;
+$gap-xsmall7xR: 2.7rem;
+$gap-xsmall8xR: 2.8rem;
+$gap-xsmall9xR: 2.9rem;
+$gap-small: 3rem;
+$gap-small1xR: 3.1rem;
+$gap-small2xR: 3.2rem;
+$gap-small3xR: 3.3rem;
+$gap-small4xR: 3.4rem;
+$gap-small5xR: 3.5rem;
+$gap-small6xR: 3.6rem;
+$gap-small7xR: 3.7rem;
+$gap-small8xR: 3.8rem;
+$gap-small9xR: 3.9rem;
+$gap-regular: 4rem;
+$gap-regular1xR: 4.1rem;
+$gap-regular2xR: 4.2rem;
+$gap-regular3xR: 4.3rem;
+$gap-regular4xR: 4.4rem;
+$gap-regular5xR: 4.5rem;
+$gap-regular6xR: 4.6rem;
+$gap-regular7xR: 4.7rem;
+$gap-regular8xR: 4.8rem;
+$gap-regular9xR: 4.9rem;
+$gap-medium: 5rem;
+$gap-medium1xR: 5.1rem;
+$gap-medium2xR: 5.2rem;
+$gap-medium3xR: 5.3rem;
+$gap-medium4xR: 5.4rem;
+$gap-medium5xR: 5.5rem;
+$gap-medium6xR: 5.6rem;
+$gap-medium7xR: 5.7rem;
+$gap-medium8xR: 5.8rem;
+$gap-medium9xR: 5.9rem;
+$gap-mediumx: 6rem;
+$gap-mediumx1xR: 6.1rem;
+$gap-mediumx2xR: 6.2rem;
+$gap-mediumx3xR: 6.3rem;
+$gap-mediumx4xR: 6.4rem;
+$gap-mediumx5xR: 6.5rem;
+$gap-mediumx6xR: 6.6rem;
+$gap-mediumx7xR: 6.7rem;
+$gap-mediumx8xR: 6.8rem;
+$gap-mediumx9xR: 6.9rem;
+$gap-mediumxx: 7rem;
+$gap-mediumxx1xR: 7.1rem;
+$gap-mediumxx2xR: 7.2rem;
+$gap-mediumxx3xR: 7.3rem;
+$gap-mediumxx4xR: 7.4rem;
+$gap-mediumxx5xR: 7.5rem;
+$gap-mediumxx6xR: 7.6rem;
+$gap-mediumxx7xR: 7.7rem;
+$gap-mediumxx8xR: 7.8rem;
+$gap-mediumxx9xR: 7.9rem;
+$gap-mediumxxx: 8rem;
+$gap-mediumxxx1xR: 8.1rem;
+$gap-mediumxxx2xR: 8.2rem;
+$gap-mediumxxx3xR: 8.3rem;
+$gap-mediumxxx4xR: 8.4rem;
+$gap-mediumxxx5xR: 8.5rem;
+$gap-mediumxxx6xR: 8.6rem;
+$gap-mediumxxx7xR: 8.7rem;
+$gap-mediumxxx8xR: 8.8rem;
+$gap-mediumxxx9xR: 8.9rem;
+$gap-large: 10rem;
+
+//*Font-size
+$font-size-mediumx: 3.6rem;
+$font-size-medium: 3rem;
+$font-size-xmedium: 2.4rem;
+$font-size-regularx: 2rem;
+$font-size-regular: 1.8rem;
+$font-size-deflautx: 1.7rem;
+$font-size-deflaut: 1.6rem;
+$font-size-small3x: 1.5rem;
+$font-size-smallxx: 1.4rem;
+$font-size-smallx: 1.3rem;
+$font-size-small: 1.2rem;
+$font-size-verysmall: 1.1rem;
+
+//*Transition
+$transition-fastx: 0.15s ease-out;
+$transition-fast: 0.3s ease-out;
+$transition-medium: 0.5s ease-out;
+$transition-slow: 0.8s ease-out;
+
+//*Border-Radius
+$radius-xsmall: 0.5rem;
+$radius-small: 1rem;
+$radius-large: 10rem;
+
+//*Container-width
+$container-width: 1180px;
+$container-width-tablet: 770px;
+$container-width-phone: 358px;
+
+$font-family: "Montserrat",
+sans-serif;
+$gradient: linear-gradient(180deg, #D4E8FD 0%, rgba(212, 232, 253, 0) 100%); //!
+$shadow: 0px 4px 30px 0px #1378DA40; //!
+
+$desktop-footer-top-wrapper-gap: 18.3rem; //!
+
+//*Другое
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: $font-family;
+}
+
+//*Скрытый элемент
+.hidden {
+    display: none !important; //!
+}
+
+//*Контейнер
+.container {
+    max-width: $container-width;
+    width: 100%;
+    margin: 0 auto;
+
+    @include respond-to('tablet') {
+        max-width: $container-width-tablet;
+    }
+
+    @include respond-to('phone') {
+        max-width: $container-width-phone;
+    }
+}
+
+.container_holder {
+    @include flex-row-start;
+    column-gap: $gap-xsmall;
+    @include respond-to('tablet') {
+        @include flex-column;
+        row-gap: $gap-small7xR;
+    }
+}
+
+//*Затемненый фон
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+}
+
+//*Заголовок
+.title {
+    color: $clr-primary-blue;
+    font-size: $font-size-xmedium;
+    font-weight: 700;
+}

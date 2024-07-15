@@ -1,0 +1,194 @@
+@import "../scss-utils/mixin";
+@import "../scss-utils/variables";
+
+.header {
+    margin-bottom: $margin-medium2;
+}
+
+.main {
+    padding-top: $padding-medium;
+    margin-bottom: $margin-mediumxx9xR;
+    background: linear-gradient(180deg, #D4E8FD 0%, rgba(212, 232, 253, 0) 100%);
+    .container {
+        .page__heading {
+            margin-bottom: $margin-small;
+            .page__heading-title {
+                text-align: center;
+                margin-bottom: $margin-medium;
+                .heading__title-item {
+                    font-weight: 700;
+                    font-size: $font-size-medium + 0.2;
+                    color: $clr-primary-blue;
+                }
+            }
+            .page__heading-subtext {
+                .heading-subtext-item {
+                    font-weight: 300;
+                    font-size: $font-size-deflaut;
+                    line-height: $gap-xsmall4xR;
+                }
+            }
+        }
+        .cafe__setings {
+            @include flex-column-center();
+            
+            .cafe__setings-img {
+                .setting__img {
+                    margin-bottom: $margin-medium;
+                }
+                .setting__bottom {
+                    max-width: 13.8rem;
+                    margin: 0 auto;
+                    margin-bottom: $margin-small1xR ;
+                    .setting__bottom-wrapper {
+                        @include flex-row;
+                        a{
+                            transition: $transition-fast;
+                            &:hover{
+                                transform: scale(1.02);
+                                transform: rotate(-360deg);
+                            }
+                        }
+                        .bottom__counter {
+                            font-size: $font-size-smallxx;
+                            line-height: 17.07px;
+                        }
+                    }
+                }
+            }
+        }
+        .cafe__disc {
+            @include flex-column-center();
+            margin-bottom: $margin-regular;
+            .cafe__disc-wrapper {
+                @include flex-row();
+                column-gap: $gap-mediumxx6xR;
+                align-items: baseline;
+                  margin-bottom: $margin-regular;
+                .cafe__disc-left {
+                    
+                    @include flex-row();
+                    align-items: baseline;
+                     column-gap: $gap-xsmall;
+                    .disc__list {
+                        .disc__item {
+                            font-size: $font-size-deflaut;
+                           
+                        }
+                    }
+                    .disc__adress {
+                        font-size: $font-size-deflaut;
+                    }
+                }
+                .cafe__disc-right {
+                    
+                    .dist__list {
+                        .disc__item {
+                            font-weight: 300;
+                            font-size: $font-size-deflaut;
+                            margin-bottom: $margin-xxsmall6xR;
+                            span{
+                                font-weight: 700;
+                                font-size: $font-size-deflaut;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .info__section{
+            .info__section-wrapper{
+                @include flex-row();
+                align-items: baseline;
+                .info__section-left{
+                        .info__section-block{
+                            margin-bottom: 17.3rem;
+                            transition: $transition-fast;
+                            &:hover{
+                                transform: scale(1.04);
+                            }
+                            &:last-child{
+                                margin-bottom: 0;
+                            }
+                            .info__block-title{
+                                margin-bottom: $margin-xxsmall6xR;
+                                .block__title-item{
+                                    font-weight: 700;
+                                    font-size: $font-size-regular;
+                                }
+                            }
+                            .info__block-text{
+                                line-height: 2.4rem;
+                                font-weight: 300;
+                                font-size: $font-size-deflaut;
+                            }
+                        }
+                }
+                .info__section-right{
+                    max-width: 58rem;
+                        .info__section-block{
+                            margin-bottom: $margin-small;
+                            transition: $transition-fast;
+                            &:hover{
+                                transform: scale(1.04);
+                            }
+                            .info__block-title{
+                                margin-bottom: $margin-xxsmall6xR;
+                                .block__title-item{
+                                    font-weight: 700;
+                                    font-size: $font-size-regular;
+                                }
+                            }
+                            .info__block-text{
+                                line-height: 2.4rem;
+                                font-weight: 300;
+                                font-size: $font-size-deflaut;
+                            }
+                        }                    
+                }
+            }
+        }
+        
+    }
+}
+
+@media (max-width:768px){
+    .main{
+        .container{
+            .info__section{
+                .info__section-wrapper{
+                    @include flex-column();
+                    .info__section-left{
+                        margin-bottom: $margin-small;
+                        .info__section-block{
+                            margin-bottom: $margin-small;
+                        }
+                    }
+                    .info__section-right{
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:375px){
+    .main{
+        .container{
+            .cafe__disc{
+                .cafe__disc-wrapper{
+                    @include flex-column();
+                    .cafe__disc-left{
+                        margin-bottom: $margin-medium;
+                        @include flex-column();
+                        .disc__list{
+                            margin-bottom: $margin-xxsmall;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

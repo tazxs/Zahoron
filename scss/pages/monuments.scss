@@ -1,0 +1,287 @@
+@import "../scss-utils/mixin";
+@import "../scss-utils/variables";
+
+.main {
+    background: linear-gradient(180deg, #D4E8FD 0%, rgba(212, 232, 253, 0) 100%);
+    padding-top: $padding-medium;
+    .container {
+        .prelainding {
+            background-image: url(/img/images/coffins__layout.png);
+            background-repeat: no-repeat;
+            
+            .prelainding__wrapper {
+                @include flex-row();
+                padding: $padding-xxsmall8xR $padding-xxsmall4xR;
+                align-items: baseline;
+                .prelainding__title-none {
+                    text-align: center;
+                    display: none;
+                    .none__title-item {
+                        font-weight: 700;
+                        font-size: $margin-small;
+                        color: $clr-white;
+                    }
+                }
+                .prelainding__left {
+                    @include flex-column-center();
+                    margin: 9rem 0 $margin-large $margin-mediumxx8xR;
+                    border: 1px solid #ffffff99;
+                    padding: $padding-small2xR;
+                    border-radius: $radius-xsmall;
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+                    .left__form {
+                        @include flex-column();
+                        label {
+                            font-size: $font-size-smallxx;
+                            font-weight: 700;
+                            color: $clr-white;
+                            margin-bottom: $margin-verysmall5xR;
+                        }
+                        select {
+                            padding: $padding-xxsmall5xR $padding-xsmall4xR;
+                            font-size: $font-size-smallxx;
+                            border-radius: $radius-xsmall;
+                            border: 1px solid #ffffff33;
+                            color: $clr-white;
+                            width: 33.2rem;
+                            margin-bottom: $margin-small;
+                            transition: $transition-fast;
+                            background-color: $clr-primary-black;
+                            &:hover {
+                                transform: scale(1.02);
+                            }
+                        }
+                    }
+                }
+                .prelainding__right {
+                    .prelainding__right-title {
+                        max-width: 44.7rem;
+                        .right__title-item {
+                            font-weight: 700;
+                            font-size: $margin-small;
+                            color: $clr-white;
+                        }
+                    }
+                }
+            }
+        }
+        .reminder {
+            background-color: $clr-primary-blue;
+            padding: $padding-medium;
+            border-radius: $radius-xsmall;
+            margin-bottom: $margin-medium2;
+            .reminder__title {
+                text-align: center;
+                margin-bottom: $margin-small;
+                .reminder__title-item {
+                    font-weight: 700;
+                    font-size: $font-size-regular;
+                    text-transform: uppercase;
+                    color: $clr-white;
+                }
+            }
+            .reminder__wrapper {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: $gap-regular;
+                .remider__card {
+                    @include flex-column-center();
+                    .reminder__card-title {
+                        .card__title-item {
+                            font-size: $font-size-deflaut;
+                            text-align: center;
+                            max-width: 21.5rem;
+                            color: $clr-white;
+                        }
+                    }
+                    transition: $transition-fast;
+                    &:hover {
+                        transform: scale(1.02);
+                    }
+                }
+            }
+        }
+        .reminder__blocks {
+            .reminder__block {
+                padding: $padding-xsmall7xR $padding-small1xR;
+                border: 1px solid #e1e1e1;
+                border-radius: $radius-small;
+                margin-bottom: $margin-medium2;
+                transition: $transition-fast;
+                .reminder__block-title {
+                    text-align: center;
+                    margin-bottom: $margin-medium;
+                    .block__title-item {
+                        font-weight: 700;
+                        font-size: $font-size-xmedium;
+                        color: $clr-primary-blue;
+                    }
+                }
+                .riminder__block-subtext {
+                    .block__subtext-item {
+                        font-size: 300;
+                        font-size: $font-size-deflaut;
+                        line-height: $gap-xsmall4xR;
+                    }
+                }
+                &:hover {
+                    transform: scale(1.05);
+                    background-color: $clr-primary-blue;
+                    .reminder__block-title {
+                        .block__title-item {
+                            color: $clr-white;
+                        }
+                    }
+                    .riminder__block-subtext {
+                        .block__subtext-item {
+                            color: $clr-white;
+                        }
+                    }
+                }
+            }
+        }
+        .cofins__stages {
+            margin-bottom: $margin-mediumx9xR;
+            .cofins__stages-wrapper{
+                display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: $gap-xxsmall5xR;
+            place-items: center;
+            .coffin__stage {
+                transition: $transition-fast;
+                &:hover {
+                    transform: scale(1.01);
+                }
+            }
+            }
+            
+        }
+        .cofins__example {
+            .coffins__example-wrapper{
+            margin-bottom: 12.1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: $gap-xxsmall5xR;
+            
+            .coffin__stage {
+                transition: $transition-fast;
+                &:hover {
+                    transform: scale(1.02);
+                }
+            }
+            }
+            
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: $gap-xsmall2xR;
+            margin-bottom: $margin-mediumx9xR;
+        }
+        .cards__holeder-end {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: $gap-xsmall2xR;
+            margin-bottom: $margin-mediumx9xR;
+        }
+        .laiding__end {
+        
+            .laiding__end-wrapper {
+                .laiding__end-title {
+                    text-align: center;
+                    .end__title-item {
+                        font-weight: 700;
+                        font-size: $font-size-medium;
+                        color: $clr-primary-blue;
+                    }
+                }
+                .laiding__end-subtext {
+                    text-align: center;
+                    .end__subtext-item {
+                        font-weight: 300;
+                        font-size: $font-size-deflaut;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        .container {
+            .prelainding {
+                background-size: cover;
+                margin-bottom: $margin-medium2;
+                border-radius: $radius-xsmall;
+                .prelainding__wrapper {
+                    .prelainding__title-none {
+                        display: block;
+                    }
+                    @include flex-column();
+                    .prelainding__left {
+                        margin: 9rem auto;
+                    }
+                    .prelainding__right {
+                        display: none;
+                    }
+                }
+            }
+            .cards__holeder-end{
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+            .cofins__example {
+                margin: auto;
+                max-width: 960px;
+                .coffins__example-wrapper {
+                    display: flex;
+                    overflow-x: scroll;
+                    white-space: nowrap;
+                    flex-shrink: 0;
+                    .coffin__stage {
+                        flex: 0 0 auto;
+                    }
+                }
+            }
+            .cofins__stages {
+                margin: auto;
+                max-width: 960px;
+                margin-bottom: $margin-medium2;
+                .cofins__stages-wrapper {
+                    display: flex;
+                    overflow-x: scroll;
+                    white-space: nowrap;
+                    flex-shrink: 0;
+                    .coffin__stage {
+                        flex: 0 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:375px){
+    .main{
+        .container{
+            .prelainding{
+                .prelainding__wrapper{
+                    .prelainding__left{
+                        .left__form{
+                            select{
+                                width: 100% ;
+                            }
+                        }
+                    }
+                }
+            }
+            .reminder{
+                .reminder__wrapper{
+                    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+                }
+            }
+            .cofins__example{
+                place-items: center;
+            }
+        }
+    }
+}

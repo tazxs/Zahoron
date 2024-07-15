@@ -1,0 +1,75 @@
+@import '../scss-utils/variables';
+@import '../scss-utils/mixin';
+.contacts-section{
+    margin-bottom: $margin-small;
+    .contacts-main-title{
+        font-weight: 700;
+        color: $clr-primary-blue;
+        font-size: $font-size-mediumx;
+        text-align: center;
+        margin-bottom: $margin-xsmall;
+        &:hover{
+            @include textShadow();
+        }
+    }
+    .contacts-general-block{
+        @include flex-sapce-bw();
+        .contacts-addres-block{
+            width: 30%;
+            transition: $transition-fast;
+            &:hover{
+                animation-name: mymove;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                animation-direction: alternate;
+                transition: box-shadow 0.4s ease-in-out;
+            }
+            .contacts-addres-line{
+                display: flex;
+                margin-bottom: $margin-small;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                .addres-title{
+                    margin-right: $margin-xsmall;
+                    font-weight: 700;
+                    font-size: $font-size-deflaut;
+                }
+                .addres-text{
+                    font-size: $font-size-deflaut;
+                    line-height: 150%;
+                }
+            }
+        }
+        .contacts-image{
+            width: 65%;
+            overflow: hidden;
+            .contacts-img{
+                &:hover{
+                    animation-name: pulse;
+                    animation-duration: 2s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: linear   ;
+                    animation-direction: alternate;
+                    transition: box-shadow 0.4s ease-in-out;
+                }
+            }
+        }
+    }
+}
+@media (max-width:834px){
+    .contacts-section{
+        .contacts-general-block{
+            display: flex;
+            flex-direction: column;
+            .contacts-addres-block{
+                width: 100%;
+                margin-bottom: $margin-xsmall;
+            }
+            .contacts-image{
+                width: 100%;
+            }
+        }
+    }
+}

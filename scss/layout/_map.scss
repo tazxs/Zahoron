@@ -1,0 +1,11 @@
+.map {
+    margin-bottom: $margin-medium;
+    .title {
+        text-align: center;
+        margin-bottom: $margin-small;
+    }
+
+    & img {
+        width: 118rem;
+    }
+}

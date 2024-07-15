@@ -1,0 +1,78 @@
+@import '../scss-utils/mixin';
+@import '../scss-utils/variables';
+.form {
+    .form_label {
+        display: block;
+
+        color: $clr-black;
+        font-size: $font-size-smallx;
+        font-weight: 300;
+
+        margin-bottom: $margin-verysmall8xR;    
+    }
+
+    .form_input {
+        width: 19.6rem;
+        height: 4rem;
+
+        border: 0.1rem solid $clr-primary-blue;
+        border-radius: $radius-xsmall;
+        -webkit-border-radius: $radius-xsmall;
+        -moz-border-radius: $radius-xsmall;
+        -ms-border-radius: $radius-xsmall;
+        -o-border-radius: $radius-xsmall;
+
+        @include respond-to('phone') {
+            width: 32.8rem;
+        }
+    }
+
+    .form_input-large {
+        width: 68rem;
+        margin-bottom: $margin-medium9xR;
+        @include respond-to('tablet') {
+            width: 77rem;
+            margin-bottom: $margin-xsmall9xR;
+        }
+
+        @include respond-to('phone') {
+            width: 32.8rem;
+        }
+    }
+
+    .form_input-medium {
+        width: 54.5rem;
+        margin-bottom: $margin-regular;
+
+        @include respond-to('phone') {
+            width: 32.8rem;
+        }
+    }
+
+    .form_title {
+        color: $clr-black;
+        font-size: $font-size-deflaut;
+        font-weight: 600;
+
+        margin-bottom: $margin-xxsmall;
+    }
+
+    .form_row {
+        @include flex-row-start;
+        column-gap: 15.3rem;
+
+        @include respond-to('tablet') {
+            column-gap: 9rem;
+        }
+
+        @include respond-to('phone') {
+            @include flex-column;
+            row-gap: $gap-xxsmall5xR;
+        }
+
+        .form_element {
+            @include flex-column;
+            row-gap: $gap-xsmall;
+        }
+    }
+}

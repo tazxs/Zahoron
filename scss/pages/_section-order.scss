@@ -1,0 +1,43 @@
+.section-order {
+  border: 1px solid $clr-border;
+  border-radius: $radius-small;
+  margin-bottom: $margin-mediumxxx;
+
+  .section_content {
+    padding: $padding-small;
+
+    .section_title {
+      @include h2-text;
+      color: $clr-primary-blue;
+      text-align: center;
+      margin-bottom: $margin-xxsmall6xR;
+    }
+
+    .section_text {
+      @include text;
+    }
+  }
+}
+
+@include respond-to("tablet") {
+  .section-order {
+    margin-bottom: $margin-medium;
+  }
+}
+
+
+@include respond-to("phone") {
+  .section-order {
+    margin-bottom: $margin-regular;
+    .section_content {
+    @include flex-column-center;
+      .section_title {
+        width: 32.8rem;
+      }
+
+      .section_text {
+        width: 31.2rem;
+      }
+    }
+  }
+}

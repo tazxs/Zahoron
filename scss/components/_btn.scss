@@ -1,0 +1,529 @@
+@import '../scss-utils/mixin';
+@import '../scss-utils/variables';
+
+.close-btn {
+    color: $clr-white;
+    font-size: $font-size-regularx;
+    position: absolute;
+    top: 1.6rem;
+    right: 1.8rem;
+}
+
+.primary-red-btn {
+    display: inline-block;
+
+    padding: $padding-xxsmall6xR $padding-small2xR;
+    background: $clr-primary-red;
+    border-radius: $radius-small;
+    -webkit-border-radius: $radius-small;
+    -moz-border-radius: $radius-small;
+    -ms-border-radius: $radius-small;
+    -o-border-radius: $radius-small;
+
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+
+    color: $clr-white;
+    font-size: $font-size-deflaut;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+
+    @include respond-to('phone') {
+        padding: $padding-xxsmall6xR $padding-small5xR;
+    }
+
+    &:hover {
+        background: $clr-primary-red-2;
+    }
+
+    &:active {
+        @include click;
+    }
+}
+
+.choose-btn {
+    @include flex-row;
+    padding: $padding-xxsmall4xR $padding-xxsmall8xR $padding-xxsmall2xR $padding-xsmall;
+    max-width: 33.2rem;
+
+    background: $clr-primary-gray;
+    border: 0.1rem solid $clr-white;
+    border-radius: $radius-small;
+    -webkit-border-radius: $radius-small;
+    -moz-border-radius: $radius-small;
+    -ms-border-radius: $radius-small;
+    -o-border-radius: $radius-small;
+
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+
+    position: relative;
+
+    color: $clr-white;
+    font-size: $font-size-smallxx;
+
+    &:hover {
+        background: $clr-primary-gray-2;
+    }
+
+    &:active {
+        @include click;
+    }
+
+    @include respond-to('phone') {
+        max-width: 28.7rem;
+    }
+}
+
+.what-btn {
+    @include flex-aligning;
+    column-gap: $gap-xsmall9xR;
+
+    background: $clr-primary-blue;
+    border-radius: $radius-xsmall;
+    -webkit-border-radius: $radius-xsmall;
+    -moz-border-radius: $radius-xsmall;
+    -ms-border-radius: $radius-xsmall;
+    -o-border-radius: $radius-xsmall;
+
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+
+    padding: $padding-xsmall8xR 0;
+    margin-bottom: $margin-mediumx;
+
+    color: $clr-white;
+    font-size: $font-size-xmedium;
+    font-weight: 700;
+
+    @include respond-to('phone') {
+        text-align: center;
+        padding: $padding-verysmall5xR 0 $padding-verysmall6xR 0;
+        max-width: 32.8rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .what-btn_btn {
+        color: $clr-white;
+        font-size: $font-size-deflaut;
+        font-weight: 400;
+        text-decoration: underline;
+
+        transition: $transition-fast;
+        -webkit-transition: $transition-fast;
+        -moz-transition: $transition-fast;
+        -ms-transition: $transition-fast;
+        -o-transition: $transition-fast;
+
+        @include respond-to('phone') {
+            display: none;
+        }
+
+        &:hover {
+            color: $clr-primary-red;
+        }
+
+        &:active {
+            @include click;
+            color: $clr-primary-red-2;
+        }
+    }
+}
+
+.price-btn {
+    width: 23.2rem;
+    height: 5.7rem;
+    border: 0.1rem solid $clr-primary-blue;
+    border-radius: $radius-xsmall;
+    -webkit-border-radius: $radius-xsmall;
+    -moz-border-radius: $radius-xsmall;
+    -ms-border-radius: $radius-xsmall;
+    -o-border-radius: $radius-xsmall;
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+
+    @include flex-aligning;
+
+    color: $clr-primary-blue;
+    font-size: $font-size-regular;
+    font-weight: 700;
+
+    &:hover {
+        background: $clr-primary-blue;
+        color: $clr-white;
+    }
+}
+
+.sort-btn {
+    width: 20rem;
+    height: 5.7rem;
+    border: 0.1rem solid $clr-primary-blue;
+    border-radius: $radius-xsmall;
+    -webkit-border-radius: $radius-xsmall;
+    -moz-border-radius: $radius-xsmall;
+    -ms-border-radius: $radius-xsmall;
+    -o-border-radius: $radius-xsmall;
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+
+    @include flex-aligning;
+
+    color: $clr-black;
+    font-size: $font-size-regular;
+
+    &:hover {
+        background: $clr-primary-blue;
+        color: $clr-white;
+    }
+}
+
+.primary-blue-btn {
+    @include flex-aligning;
+
+    width: 15.4rem;
+    height: 5.2rem;
+
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+
+    background: $clr-primary-blue;
+    border-radius: $radius-xsmall;
+    -webkit-border-radius: $radius-xsmall;
+    -moz-border-radius: $radius-xsmall;
+    -ms-border-radius: $radius-xsmall;
+    -o-border-radius: $radius-xsmall;
+
+    color: $clr-white;
+    font-size: $font-size-deflaut;
+    font-weight: 500;
+
+    &:hover {
+        background: $clr-primary-blue-2;
+    }
+
+    &:active {
+        @include click;
+    }
+}
+
+.btn1 {
+    padding: $padding-xxsmall6xR $padding-small2xR;
+    background-color: $clr-primary-red;
+    border-radius: $radius-xsmall;
+    color: $clr-white;
+    transition: $transition-fast;
+    font-weight: 700;
+    font-size: $font-size-deflaut;
+
+    &:hover {
+        transform: scale(1.02);
+        background-color: $clr-primary-blue;
+    }
+}
+
+//* funeral btn
+
+.funeral-btn {
+    color: $clr-white;
+    padding: $padding-xxsmall6xR $padding-small2xR;
+    background-color: $clr-primary-red;
+    font-size: $font-size-deflaut;
+    border-radius: $radius-xsmall;
+    transition: $transition-fast;
+
+    &:hover {
+        transform: scale(1.03);
+        box-shadow: $shadow;
+    }
+
+    &:active {
+        background-color: $clr-primary-red-2;
+    }
+}
+
+.close-btn {
+    color: $clr-white;
+    font-size: $font-size-regularx;
+    position: absolute;
+    top: 1.6rem;
+    right: 1.8rem;
+}
+
+.primary-red-btn {
+    display: inline-block;
+
+    padding: $padding-xxsmall6xR $padding-small2xR;
+    background: $clr-primary-red;
+    border-radius: $radius-small;
+    -webkit-border-radius: $radius-small;
+    -moz-border-radius: $radius-small;
+    -ms-border-radius: $radius-small;
+    -o-border-radius: $radius-small;
+
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+
+    color: $clr-white;
+    font-size: $font-size-deflaut;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+
+    @include respond-to("phone") {
+        padding: $padding-xxsmall6xR $padding-small5xR;
+    }
+
+    &:hover {
+        background: $clr-primary-red-2;
+    }
+
+    &:active {
+        @include click;
+    }
+}
+
+.choose-btn {
+    @include flex-row;
+    padding: $padding-xxsmall4xR $padding-xxsmall8xR $padding-xxsmall2xR $padding-xsmall;
+    max-width: 33.2rem;
+
+    background: $clr-primary-gray;
+    border: 0.1rem solid $clr-white;
+    border-radius: $radius-small;
+    -webkit-border-radius: $radius-small;
+    -moz-border-radius: $radius-small;
+    -ms-border-radius: $radius-small;
+    -o-border-radius: $radius-small;
+
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+
+    position: relative;
+
+    color: $clr-white;
+    font-size: $font-size-smallxx;
+
+    &:hover {
+        background: $clr-primary-gray-2;
+    }
+
+    &:active {
+        @include click;
+    }
+
+    @include respond-to("phone") {
+        max-width: 28.7rem;
+    }
+}
+
+.what-btn {
+    @include flex-aligning;
+    column-gap: $gap-xsmall9xR;
+
+    background: $clr-primary-blue;
+    border-radius: $radius-xsmall;
+    -webkit-border-radius: $radius-xsmall;
+    -moz-border-radius: $radius-xsmall;
+    -ms-border-radius: $radius-xsmall;
+    -o-border-radius: $radius-xsmall;
+
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+
+    padding: $padding-xsmall8xR 0;
+    margin-bottom: $margin-mediumx;
+
+    color: $clr-white;
+    font-size: $font-size-xmedium;
+    font-weight: 700;
+
+    @include respond-to("phone") {
+        text-align: center;
+        padding: $padding-verysmall5xR 0 $padding-verysmall6xR 0;
+        max-width: 32.8rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .what-btn_btn {
+        color: $clr-white;
+        font-size: $font-size-deflaut;
+        font-weight: 400;
+        text-decoration: underline;
+
+        transition: $transition-fast;
+        -webkit-transition: $transition-fast;
+        -moz-transition: $transition-fast;
+        -ms-transition: $transition-fast;
+        -o-transition: $transition-fast;
+
+        @include respond-to("phone") {
+            display: none;
+        }
+
+        &:hover {
+            color: $clr-primary-red;
+        }
+
+        &:active {
+            @include click;
+            color: $clr-primary-red-2;
+        }
+    }
+}
+
+.price-btn {
+    width: 23.2rem;
+    height: 5.7rem;
+    border: 0.1rem solid $clr-primary-blue;
+    border-radius: $radius-xsmall;
+    -webkit-border-radius: $radius-xsmall;
+    -moz-border-radius: $radius-xsmall;
+    -ms-border-radius: $radius-xsmall;
+    -o-border-radius: $radius-xsmall;
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+
+    @include flex-aligning;
+
+    color: $clr-primary-blue;
+    font-size: $font-size-regular;
+    font-weight: 700;
+
+    &:hover {
+        background: $clr-primary-blue;
+        color: $clr-white;
+    }
+}
+
+.sort-btn {
+    width: 20rem;
+    height: 5.7rem;
+    border: 0.1rem solid $clr-primary-blue;
+    border-radius: $radius-xsmall;
+    -webkit-border-radius: $radius-xsmall;
+    -moz-border-radius: $radius-xsmall;
+    -ms-border-radius: $radius-xsmall;
+    -o-border-radius: $radius-xsmall;
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+
+    @include flex-aligning;
+
+    color: $clr-black;
+    font-size: $font-size-regular;
+
+    &:hover {
+        background: $clr-primary-blue;
+        color: $clr-white;
+    }
+}
+
+.primary-blue-btn {
+    @include flex-aligning;
+
+    width: 15.4rem;
+    height: 5.2rem;
+
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+
+    background: $clr-primary-blue;
+    border-radius: $radius-xsmall;
+    -webkit-border-radius: $radius-xsmall;
+    -moz-border-radius: $radius-xsmall;
+    -ms-border-radius: $radius-xsmall;
+    -o-border-radius: $radius-xsmall;
+
+    color: $clr-white;
+    font-size: $font-size-deflaut;
+    font-weight: 500;
+
+    &:hover {
+        background: $clr-primary-blue-2;
+    }
+
+    &:active {
+        @include click;
+    }
+}
+
+.about__link {
+    @include btn(1.5rem, 2rem, $radius-xsmall, $clr-primary-red);
+    color: $clr-white;
+    font-weight: 700;
+
+    transition: $transition-fast;
+
+    @include respond-to("phone") {
+        padding: $padding-xxsmall6xR $padding-small5xR;
+    }
+
+    &:hover {
+        background: $clr-primary-red-2;
+    }
+
+    &:active {
+        @include click;
+    }
+}
+
+
+//* card btn
+
+.card_btn {
+    color: $clr-white;
+    font-size: $font-size-deflaut;
+    font-weight: 700;
+    background-color: $clr-primary-red;
+    padding: $padding-xsmall;
+    border-radius: $radius-xsmall;
+    transition: $transition-fast;
+
+    &:hover {
+        transform: scale(1.03);
+        box-shadow: $shadow;
+    }
+
+    &:active {
+        background-color: $clr-primary-red-2;
+    }
+}

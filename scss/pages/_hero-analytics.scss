@@ -1,0 +1,147 @@
+@import '../scss-utils/mixin';
+@import '../scss-utils/variables';
+
+.hero {
+    .hero_top {
+        @include flex-row-start;
+        margin-bottom: $margin-small5xR;
+
+        @include respond-to('phone') {
+            @include flex-column;
+            row-gap: $gap-verysmall3xR;
+            margin-left: $margin-mediumxx;
+        }
+
+        .hero_top-right {
+            padding: $padding-xxsmall8xR $padding-small1xR $padding-xxsmall9xR $padding-xsmall7xR;
+            background: $clr-white;
+            border-radius: $radius-xsmall;
+            -webkit-border-radius: $radius-xsmall;
+            -moz-border-radius: $radius-xsmall;
+            -ms-border-radius: $radius-xsmall;
+            -o-border-radius: $radius-xsmall;
+            box-shadow: $shadow;
+
+            .hero_top-right__element {
+                @include flex-row-center;
+                column-gap: $gap-xxsmall;
+
+                input {
+                    appearance: none;
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    border: 0.1rem solid $clr-primary-blue;
+                    border-radius: $radius-xsmall;
+                    -webkit-border-radius: $radius-xsmall;
+                    -moz-border-radius: $radius-xsmall;
+                    -ms-border-radius: $radius-xsmall;
+                    -o-border-radius: $radius-xsmall;
+
+                    &:checked {
+                        background: $clr-primary-blue;
+                    }
+                }
+
+                label {
+                    color: $clr-black;
+                    font-size: $font-size-regular;
+                }
+            }
+        }
+    }
+
+    .hero_grafic {
+        margin-bottom: $margin-mediumxx5xR;
+        margin-left: 12rem;
+
+        @include respond-to('tablet') {
+            margin-left: 0;
+        }
+
+        @include respond-to('phone') {
+            display: none;
+        }
+    }
+
+    .hero_last-text {
+        color: $clr-black;
+        font-size: $font-size-deflaut;
+
+        @include respond-to('tablet') {
+            display: none;
+        }
+    }
+
+    .hero_table {
+        display: none;
+
+        @include respond-to('tablet') {
+            @include flex-wrap;
+
+            .hero_element {
+                padding: $padding-xxsmall6xR $padding-small1xR;
+                border: 0.1rem solid $clr-primary-blue;
+                color: $clr-primary-blue;
+                font-size: $font-size-deflaut;
+                font-weight: 500;
+                text-align: center;
+
+                @include respond-to('phone') {
+                    width: 16.4rem;
+                    height: 4.5rem;
+                    @include flex-aligning;
+                    padding: 0;
+                }
+
+                &:nth-child(5) {
+                    padding: $padding-xxsmall6xR $padding-medium2xR;
+
+                    @include respond-to('phone') {
+                        width: 16.4rem;
+                        height: 4.5rem;
+                        @include flex-aligning;
+                        padding: 0;
+                    }
+                }
+
+                &:nth-child(6) {
+                    padding: $padding-xxsmall6xR 7.75rem;
+
+                    @include respond-to('phone') {
+                        width: 16.4rem;
+                        height: 4.5rem;
+                        @include flex-aligning;
+                        padding: 0;
+                    }
+                }
+
+                &:nth-child(7) {
+                    padding: $padding-xxsmall6xR 11.35rem;
+
+                    @include respond-to('phone') {
+                        width: 16.4rem;
+                        height: 4.5rem;
+                        @include flex-aligning;
+                        padding: 0;
+                    }
+                }
+
+                &:nth-child(8) {
+                    width: 17.3rem;
+                    height: 5.2rem;
+                    padding: 0;
+                    @include flex-aligning;
+
+                    @include respond-to('phone') {
+                        width: 16.4rem;
+                        height: 4.5rem;
+                        @include flex-aligning;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+
+        .hero_element {}
+    }
+}

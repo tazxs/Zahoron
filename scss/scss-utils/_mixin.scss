@@ -1,0 +1,247 @@
+//* Адаптив
+@mixin respond-to($media) {
+    @if $media=="phone" {
+        @media (max-width: 375px) {
+            @content;
+        }
+    }
+
+    @else if $media=="tablet" {
+        @media (max-width: 834px) {
+            @content;
+        }
+    }
+
+    @else if $media=="laptop" {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    }
+}
+
+@mixin click() {
+    position: relative;
+    top: 0.1rem;
+}
+
+//* Флекс миксины
+@mixin flex-row($justify: space-between, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin flex-row-start() {
+    display: flex;
+    align-items: flex-start;
+}
+
+@mixin flex-row-center() {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-row-center($gap: 0) {
+    display: flex;
+    align-items: center;
+    gap: $gap;
+}
+
+@mixin flex-row-end() {
+    display: flex;
+    align-items: flex-end;
+}
+
+@mixin flex-row-end($gap: 0) {
+    //!
+    display: flex;
+    align-items: flex-end;
+    gap: $gap; //!
+}
+
+@mixin flex-row-justify-end($gap: 0) {
+    display: flex;
+    justify-content: flex-end;
+    gap: $gap;
+}
+
+@mixin flex-row-justify-start($gap: 0) {
+    display: flex;
+    justify-content: flex-start;
+    gap: $gap;
+}
+
+@mixin flex-column() {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-column-start() {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@mixin flex-column-center() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin flex-column-end() {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+@mixin flex-column-reverse() {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@mixin flex-column-aligning() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@mixin flex-wrap() {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin flex-aligning() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-sapce-around() {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin flex-sapce-between() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-space-around() {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin flex-sapce-bw() {
+    display: flex;
+    justify-content: space-between;
+}
+
+//* Анимации
+@mixin textShadow() {
+    &:hover {
+        transform: scale(1.02);
+        -webkit-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        -o-transform: scale(1.02);
+        text-shadow: 0.1rem 0.1rem 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    }
+
+    &:active {
+        transform: translateY(.5rem) scale(1.02);
+        -webkit-transform: translateY(.5rem) scale(1.02);
+        -moz-transform: translateY(.5rem) scale(1.02);
+        -ms-transform: translateY(.5rem) scale(1.02);
+        -o-transform: translateY(.5rem) scale(1.02);
+    } 
+}
+
+//*Градиент
+@mixin gradientAfter() { //!
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -9.9rem;
+        background: linear-gradient(180deg, #D4E8FD 0%, rgba(212, 232, 253, 0) 100%);
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+}
+
+@mixin scalingAnime() {
+    @keyframes scaling {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.02);
+        }
+    }
+    animation: scaling .5s ease-out infinite alternate;
+
+    &:hover {
+        animation-play-state: paused;
+    }
+}
+
+//* Тексты
+
+@mixin h3-text {
+    font-size: $font-size-regularx;
+    font-weight: 700;
+}
+
+@mixin h2-text() {
+    font-size: $font-size-xmedium;
+    font-weight: 700;
+}
+
+@mixin text() {
+    font-size: $font-size-deflaut;
+    font-weight: 300;
+}
+
+@mixin text-info() {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2.5rem;
+    &:hover{
+        color: red;
+        transition: 0.3s;
+    }
+}
+@mixin title(){
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: $clr-primary-blue;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+@mixin title-min(){
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+@mixin text($fw: 400, $fz: 1.6rem, $line-height: 2rem, $color: $clr-black) {
+    font-weight: $fw;
+    font-size: $fz;
+    line-height: $line-height;
+    color: $color;
+}
+
+//* Кнопка
+
+@mixin btn($first-padding, $second-padding, $radius, $bgc) {
+    padding: $first-padding $second-padding;
+    border-radius: $radius-xsmall;
+    background-color: $bgc;
+}

@@ -1,0 +1,50 @@
+@import '../scss-utils/variables';
+@import '../scss-utils/mixin';
+
+.main:before{
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 50vw;
+    background: linear-gradient(180deg, #D4E8FD 0%, rgba(212, 232, 253, 0) 100%);
+}
+.main:after{
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    right: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 50vh;
+    background: linear-gradient(180deg, #D4E8FD 0%, rgba(212, 232, 253, 0) 100%);
+    transform: rotate(180deg);
+}
+
+.main{
+    position: relative;
+    
+    .catalog__cards{
+        margin-bottom: $margin-medium;
+        &_content{
+            display: grid;
+            row-gap: $gap-regular;
+            .grid-4x1{
+                column-gap: $gap-medium5xR;
+            }
+            .grid{
+                display: grid;
+                grid-template-columns: repeat(3, 254px);
+                column-gap: $gap-medium5xR;
+                justify-content: center;
+            }
+            @include respond-to('tablet'){
+                grid-template-columns: repeat(2, 1fr);
+                gap: $gap-medium5xR;
+                overflow-x: scroll;
+            }
+        }
+    }
+}

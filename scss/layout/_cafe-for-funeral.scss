@@ -1,0 +1,9 @@
+@import "../scss-utils/mixin", "../scss-utils/variables";
+
+.cafe-for-funeral {
+    margin-bottom: $margin-regular;
+    .title {
+        text-align: center;
+        margin-bottom: $margin-small5xR;
+    }
+}

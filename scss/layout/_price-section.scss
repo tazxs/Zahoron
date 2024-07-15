@@ -1,0 +1,100 @@
+@import '../scss-utils/mixin';
+@import '../scss-utils/variables';
+.container{
+    .price-section{
+        margin-bottom: $margin-medium;
+        .price-title{
+            color: $clr-primary-blue;
+            font-weight: 700;
+            font-size: $font-size-xmedium;
+            text-align: center;
+            margin-bottom: $margin-xsmall;
+        }
+        .price-cards{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .price-card{
+                &:hover{
+                    transform: translateY(-1rem);
+                }
+                transition: $transition-fast;
+                margin-right: 10rem;
+                flex-shrink: 0;
+                border-radius: 1rem;
+                background-color: $clr-white;
+                box-shadow: 0px 1px 142px -78px rgba(0,0,0,0.75);
+                width: 29rem;
+                margin-right: 1rem;
+                .price-card-title-wrap{
+                    border-radius: .8rem;
+                    background-color: $clr-primary-blue;
+                    text-align: center; 
+                    padding: $padding-xxsmall5xR;
+                    margin-bottom: $margin-xxsmall;
+                    .price-card-title{
+                        color: $clr-white;
+                        font-size: $font-size-xmedium;
+                        font-weight: 700;
+                    }
+                    .price-card-text{
+                        color: #b7dcff;
+                        font-weight: 700;
+                        font-size: $font-size-regular;
+                    }
+                }
+                ul{
+                    margin-bottom: $margin-mediumx;
+                    margin-left: 2rem;
+                    .price-li{
+                        list-style: disc;
+                        font-weight: 600;
+                        font-size: $font-size-smallxx;
+                        margin-bottom: $margin-verysmall5xR;
+                        transition: $transition-fast;
+                        &:hover{
+                            transform: translateX(1rem);
+                            color: $clr-primary-blue;
+                        }
+                    }
+                }
+                .price-image{
+                    height: 27rem;
+                    margin-bottom: $margin-small;
+                    .price-img{
+                        width: 100%;
+                        height: 27rem;
+                    }
+                }
+                .price-button{
+                    margin-bottom: $margin-xsmall;
+                    border-radius: .5rem;
+                    padding: $padding-xsmall;
+                    background-color: $clr-primary-red;
+                    text-align: center;
+                    .price-btn{
+                        text-align: center;
+                        background-color: $clr-primary-red;
+                        padding: 2rem;
+                        color: $clr-white;
+                        font-weight: 700;
+                        font-size: $font-size-deflaut;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:1120px){
+    .container{
+        .price-section{
+            .price-cards{
+                overflow-x: scroll;
+                .price-card{
+                    width: 24rem;
+                }
+            }
+        }
+    }
+}

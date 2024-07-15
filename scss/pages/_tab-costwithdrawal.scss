@@ -1,0 +1,107 @@
+@import '../scss-utils/mixin';
+@import '../scss-utils/variables';
+
+.tab {
+    margin-bottom: 9.3rem;
+
+    @include respond-to('phone') {
+        margin-bottom: $margin-medium;
+    }
+
+    .container {
+        .tab_title {
+            text-align: center;
+            margin-bottom: $margin-medium;
+        }
+
+        .tab_table {
+            @include flex-column;
+
+            .tab_text {
+                color: $clr-black;
+                font-size: $font-size-deflaut;
+                line-height: 1.95rem;
+
+                @include respond-to('tablet') {
+                    font-size: $font-size-smallx;
+                }
+            }
+
+            .tab_top {
+                @include flex-row;
+                padding: 0 $padding-xsmall8xR $padding-xxsmall8xR $padding-mediumx9xR;
+                border-bottom: 0.1rem solid $clr-black;
+            }
+
+            .tab_element {
+                padding: $padding-xxsmall5xR $padding-verysmall4xR $padding-xxsmall5xR $padding-verysmall2xR;
+                @include flex-row;
+                border-bottom: 0.1rem solid $clr-black;
+
+                .tab_text {
+                    &:first-child {
+                        max-width: 37.8rem;
+
+                        @include respond-to('tablet') {
+                            max-width: 20rem;
+                        }
+                    }
+                }
+
+                .tab_element-column {
+                    @include flex-column;
+                    row-gap: $gap-xxsmall;
+
+                    @include respond-to('tablet') {
+                        row-gap: $gap-verysmall5xR
+                    }
+
+                    .tab_text-italic {
+                        font-style: italic;
+                    }
+                }
+
+                &:first-child {
+                    padding: $padding-xxsmall2xR $padding-verysmall5xR $padding-xxsmall5xR $padding-verysmall2xR;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .tab {
+        .container {
+            .tab_table {
+                display: none;
+            }
+
+            .tab_table-phone {
+                display: block !important;
+                .tab_element {
+                    padding: $padding-xsmall $padding-xsmall4xR $padding-xsmall $padding-xsmall5xR;
+                    border-bottom: 0.1rem solid $clr-black;
+                    .tab_element-title {
+                        color: $clr-black;
+                        font-size: $font-size-deflaut;
+                        font-weight: 700;
+                        max-width: 27.9rem;
+
+                        margin-bottom: $margin-xxsmall5xR;
+                    }
+
+                    .tab_text {
+                        color: $clr-black;
+                        font-size: $font-size-deflaut;
+
+                        margin-bottom: $margin-xxsmall5xR;
+                    }
+
+                    .tab_text-right {
+                        margin-left: 9.1rem;
+                    }
+                }
+            }
+        }
+    }
+}

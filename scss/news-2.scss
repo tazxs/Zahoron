@@ -1,0 +1,17 @@
+@import './base/reset';
+
+@import './components/modal';
+@import './components/btn';
+@import './components/card';
+
+@import './layout/header';
+@import './layout/footer';
+@import './layout/grid';
+@import './layout/news';
+@import './layout/catalog-product';
+@import './layout/about';
+
+@import './scss-utils/variables';
+@import './scss-utils/mixin';
+
+@import './pages/news-2';

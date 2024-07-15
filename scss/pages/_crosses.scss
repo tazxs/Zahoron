@@ -1,0 +1,90 @@
+@import '../scss-utils/variables';
+@import '../scss-utils/mixin';
+
+
+.main:before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 50vw;
+    background: linear-gradient(180deg, #d4e8fd 0%, rgba(212, 232, 253, 0) 100%);
+}
+.main:after{
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    right: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 50vh;
+    background: linear-gradient(180deg, #D4E8FD 0%, rgba(212, 232, 253, 0) 100%);
+    transform: rotate(180deg);
+}
+
+.main {
+    position: relative;
+    .advantages {
+        margin-bottom: $margin-medium;
+        .adventages_content {
+            .section_title {
+                margin-bottom: $margin-small;
+            }
+            .text {
+                @include text();
+            }
+            .center {
+                text-align: center;
+            }
+            .block_holder {
+                margin-top: $margin-xsmall6xR;
+                display: flex;
+                gap: $gap-regular3xR;
+                @include respond-to("tablet") {
+                    flex-direction: column;
+                    
+                }
+                @include respond-to("phone") {
+                    gap: $gap-xsmall5xR;
+                }
+                .block_holder-first {
+                    display: grid;
+                    grid-template-columns: 13.3rem 22.2rem 28.8rem;
+                    gap: $gap-regular3xR;
+                    @include respond-to("tablet") {
+                        grid-template-columns: 13.3rem 22.2rem 18.1rem;
+                        gap: $gap-mediumxxx7xR;
+                    }
+                    @include respond-to('phone'){
+                        grid-template-columns: repeat(1, 1fr);
+                        gap: $gap-xsmall5xR;
+                    }
+                }
+                .block_holder-second {
+                    display: grid;
+                    grid-template-columns: 13.7rem 16.6rem;
+                    gap: $gap-regular3xR;
+                    @include respond-to('tablet'){
+                            justify-content: center;
+                            gap: 15.9rem;
+                    }
+                    @include respond-to('phone') {
+                        grid-template-columns: repeat(1, 1fr) ;
+                        gap: $gap-xsmall5xR;
+                    }
+                }
+                .block {
+                    text-align: center;
+                    .icon {
+                        margin-bottom: $margin-xxsmall;
+                        .img {
+                            height: 2.4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

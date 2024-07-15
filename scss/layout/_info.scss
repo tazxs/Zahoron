@@ -1,0 +1,706 @@
+@import "../scss-utils/variables";
+@import "../scss-utils/_mixin";
+@import "../base/_reset";
+
+.main{
+    margin-top: $margin-medium;
+    .container{
+        .main-contant{
+            .card-title{
+                font-size: $margin-small;
+                color: $clr-white;
+                font-weight: 700;
+                margin-bottom: 3rem;
+            }
+            .card-info{
+                font-size: 1.6rem;
+                color: $clr-white;
+                line-height: 2.5rem;
+                width: 60rem;
+                &:hover{
+                    color: red;
+                    transition: 0.3s;
+                }
+            }
+            .advantages-of__ordering{
+                border: 1px solid #E1E1E1;
+                height: 66rem;
+                border-radius: 5px;
+                padding: 3.5rem;
+                cursor: pointer;
+                &:hover{
+                    scale: (1.02);
+                    transition: 0.4s;
+                    box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.90);
+                    -moz-box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.00);
+                    box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.90);
+                }
+                .title-ordering{
+                    font-size: 2.4rem;
+                    font-weight: 700;
+                    color: $clr-primary-blue;
+                    text-align: center;
+                    margin-bottom: 3rem;
+                }
+                .words{
+                    font-size: 1.6rem;
+                    margin-bottom: 3rem;
+                    &:hover{
+                        color: red;
+                        transition: 0.3s;
+                    }
+                }
+                .ordering-line{
+                    @include flex-sapce-bw();
+                    .line-card{
+                        margin-left: 3rem;
+                        width: 35rem;
+                        &:nth-child(1){
+                            margin-left: 0rem;
+                        }
+                        img{
+                            margin-left: 16rem;
+                            margin-bottom: 1.5rem;
+                        }
+                        .card-text{
+                            font-size: 1.6rem;
+                            font-weight: 300;
+                            line-height: 2.5rem;
+                            &:hover{
+                                color: red;
+                                transition: 0.3s;
+                            }
+                        }
+                    }
+                }
+                .ordering-line__two{
+                    display: flex;
+                    margin-top: 1rem;
+                    margin-left: 18rem;
+                    .line-card{
+                        margin-left: 3rem;
+                        width: 35rem;
+                        &:nth-child(1){
+                            margin-left: 0rem;
+                        }
+                        img{
+                            margin-left: 16rem;
+                            margin-bottom: 1.5rem;
+                        }
+                        .card-text{
+                            font-size: 1.6rem;
+                            font-weight: 300;
+                            line-height: 2.5rem;
+                            &:hover{
+                                color: red;
+                                transition: 0.3s;
+                            }
+                        }
+                    }
+                }
+                .ordering-texts{
+                    font-size: 1.6rem;
+                    font-weight: 300;
+                    line-height: 2.5rem;
+                    margin-top: 2rem;
+                    &:hover{
+                        color: red;
+                        transition: 0.3s;
+                    }
+                }
+            }
+
+            .price-ordering{
+                border: 1px solid #E1E1E1;
+                margin-top: 5rem;
+                height: 28rem;
+                padding: 3rem;
+                border-radius: 5px;
+                cursor: pointer;
+                &:hover{
+                    scale: (1.02);
+                    transition: 0.4s;
+                    box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.90);
+                    -moz-box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.00);
+                    box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.90);
+                }
+                .price-title{
+                    font-size: 2.4rem;
+                    font-weight: 700;
+                    color: $clr-primary-blue;
+                    text-align: center;
+                    margin-bottom: 3rem;
+                }
+                .price-text{
+                    font-size: 1.6rem;
+                    font-weight: 300;
+                    line-height: 2.5rem;
+                    margin-top: 2rem;
+                    &:hover{
+                        color: red;
+                        transition: 0.3s;
+                    }
+                }
+                .price-text__two{
+                    font-size: 1.6rem;
+                    font-weight: 300;
+                    line-height: 2.5rem;
+                    margin-top: 1rem;
+                    &:hover{
+                        color: red;
+                        transition: 0.3s;
+                    }
+                }
+            }
+
+            .main-stages{
+                border: 1px solid #E1E1E1;
+                margin-top: 5rem;
+                height: 176rem;
+                padding: 3rem;
+                border-radius: 5px;
+                cursor: pointer;
+                &:hover{
+                    scale: (1.02);
+                    transition: 0.4s;
+                    box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.90);
+                    -moz-box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.00);
+                    box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.90);
+                }
+                .stages-title{
+                    @include title();
+                }
+                .stages-words{
+                    @include text-info();
+                }
+                .stages-title__min{
+                    @include title-min();
+                }
+                .stages-word{
+                    margin-top: 2rem;
+                    font-size: 1.6rem;
+                    font-weight: 300;
+                    &:hover{
+                        color: red;
+                        transition: 0.3s;
+                    }
+                }
+                .stages-word__line{
+                    margin-top: 1rem;
+                    @include flex-row-center();
+                    .box{
+                        width: 1.2rem;
+                        height: 1.2rem;
+                        background: $clr-primary-blue;
+                        border-radius: 1rem;
+                    }
+                    .bop-word{
+                        margin-left: 1rem;
+                        @include text-info();
+                    }
+                }
+                .stages-words__two{
+                    @include text-info();
+                    margin-top: 1rem;
+                }
+                .title-text{
+                    @include text-info();
+                    margin-top: 2rem;
+                }
+            }
+
+            .how-to__order{
+                border: 1px solid #E1E1E1;
+                margin-top: 5rem;
+                height: 24rem;
+                padding: 3rem;
+                border-radius: 5px;
+                cursor: pointer;
+                &:hover{
+                    scale: (1.02);
+                    transition: 0.4s;
+                    box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.90);
+                    -moz-box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.00);
+                    box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.90);
+                }
+                .order-title{
+                    @include title();
+                }
+                .text{
+                    @include text-info();
+                }
+                .text-two{
+                    @include text-info();
+                    margin-top: 1rem;
+                }
+            }
+            .block{
+                height: 7.5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 834px){
+    .main{
+        margin-top: $margin-medium;
+        .container{
+            .main-contant{
+                .card-title{
+                    font-size: $margin-small;
+                    color: $clr-white;
+                    font-weight: 700;
+                    margin-bottom: 3rem;
+                }
+                .card-info{
+                    font-size: 1.6rem;
+                    color: $clr-white;
+                    line-height: 2.5rem;
+                    width: 58rem;
+                    &:hover{
+                        color: red;
+                        transition: 0.3s;
+                    }
+                }
+                .advantages-of__ordering{
+                    border: 1px solid #E1E1E1;
+                    height: 88rem;
+                    border-radius: 5px;
+                    padding: 3.5rem;
+                    .title-ordering{
+                        font-size: 2.4rem;
+                        font-weight: 700;
+                        color: $clr-primary-blue;
+                        text-align: center;
+                        margin-bottom: 3rem;
+                    }
+                    .words{
+                        font-size: 1.6rem;
+                        margin-bottom: 3rem;
+                        &:hover{
+                            color: red;
+                            transition: 0.3s;
+                        }
+                    }
+                    .ordering-line{
+                        @include flex-sapce-bw();
+                        .line-card{
+                            margin-left: 3rem;
+                            width: 35rem;
+                            &:nth-child(1){
+                                margin-left: 0rem;
+                            }
+                            img{
+                                margin-left: 10rem;
+                                margin-bottom: 1.5rem;
+                            }
+                            .card-text{
+                                font-size: 1.6rem;
+                                font-weight: 300;
+                                line-height: 2.5rem;
+                                &:hover{
+                                    color: red;
+                                    transition: 0.3s;
+                                }
+                            }
+                        }
+                    }
+                    .ordering-line__two{
+                        display: flex;
+                        margin-top: 1rem;
+                        margin-left: 1rem;
+                        .line-card{
+                            margin-left: 3rem;
+                            width: 35rem;
+                            &:nth-child(1){
+                                margin-left: 0rem;
+                            }
+                            img{
+                                margin-left: 14rem;
+                                margin-bottom: 1.5rem;
+                            }
+                            .card-text{
+                                font-size: 1.6rem;
+                                font-weight: 300;
+                                line-height: 2.5rem;
+                                &:hover{
+                                    color: red;
+                                    transition: 0.3s;
+                                }
+                            }
+                        }
+                    }
+                    .ordering-texts{
+                        font-size: 1.6rem;
+                        font-weight: 300;
+                        line-height: 2.5rem;
+                        margin-top: 2rem;
+                        &:hover{
+                            color: red;
+                            transition: 0.3s;
+                        }
+                    }
+                }
+    
+                .price-ordering{
+                    border: 1px solid #E1E1E1;
+                    margin-top: 5rem;
+                    height: 38rem;
+                    padding: 3rem;
+                    border-radius: 5px;
+                    &:hover{
+                        scale: (1.02);
+                        transition: 0.4s;
+                        box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.90);
+                        -moz-box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.00);
+                        box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.90);
+                    }
+                    .price-title{
+                        font-size: 2.4rem;
+                        font-weight: 700;
+                        color: $clr-primary-blue;
+                        text-align: center;
+                        margin-bottom: 3rem;
+                    }
+                    .price-text{
+                        font-size: 1.6rem;
+                        font-weight: 300;
+                        line-height: 2.5rem;
+                        margin-top: 2rem;
+                        &:hover{
+                            color: red;
+                            transition: 0.3s;
+                        }
+                    }
+                    .price-text__two{
+                        font-size: 1.6rem;
+                        font-weight: 300;
+                        line-height: 2.5rem;
+                        margin-top: 1rem;
+                        &:hover{
+                            color: red;
+                            transition: 0.3s;
+                        }
+                    }
+                }
+    
+                .main-stages{
+                    border: 1px solid #E1E1E1;
+                    margin-top: 5rem;
+                    height: 204rem;
+                    padding: 3rem;
+                    border-radius: 5px;
+                    &:hover{
+                        scale: (1.02);
+                        transition: 0.4s;
+                        box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.90);
+                        -moz-box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.00);
+                        box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.90);
+                    }
+                    .stages-title{
+                        @include title();
+                    }
+                    .stages-words{
+                        @include text-info();
+                    }
+                    .stages-title__min{
+                        @include title-min();
+                    }
+                    .stages-word{
+                        margin-top: 2rem;
+                        font-size: 1.6rem;
+                        font-weight: 300;
+                        &:hover{
+                            color: red;
+                            transition: 0.3s;
+                        }
+                    }
+                    .stages-word__line{
+                        margin-top: 1rem;
+                        @include flex-row-center();
+                        .box{
+                            width: 1.2rem;
+                            height: 1.2rem;
+                            background: $clr-primary-blue;
+                            border-radius: 1rem;
+                        }
+                        .bop-word{
+                            margin-left: 1rem;
+                            @include text-info();
+                        }
+                    }
+                    .stages-words__two{
+                        @include text-info();
+                        margin-top: 1rem;
+                    }
+                    .title-text{
+                        @include text-info();
+                        margin-top: 2rem;
+                    }
+                }
+    
+                .how-to__order{
+                    border: 1px solid #E1E1E1;
+                    margin-top: 5rem;
+                    height: 33rem;
+                    padding: 3rem;
+                    border-radius: 5px;
+                    &:hover{
+                        scale: (1.02);
+                        transition: 0.4s;
+                        box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.90);
+                        -moz-box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.00);
+                        box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.90);
+                    }
+                    .order-title{
+                        @include title();
+                    }
+                    .text{
+                        @include text-info();
+                    }
+                    .text-two{
+                        @include text-info();
+                        margin-top: 1rem;
+                    }
+                }
+                .block{
+                    height: 7.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 375px){
+    .main{
+        margin-top: $margin-medium;
+        .container{
+            max-width: $container-width-phone;
+            width: 100%;
+            margin: 0 auto;
+            .main-contant{
+                .card-title{
+                    font-size: $margin-small;
+                    color: $clr-white;
+                    font-weight: 700;
+                    margin-bottom: 3rem;
+                    width: 32rem;
+                    text-align: center;
+                }
+                .card-info{
+                    font-size: 1.6rem;
+                    color: $clr-white;
+                    line-height: 2.5rem;
+                    width: 58rem;
+                    width: 32.8rem;
+                    &:hover{
+                        color: red;
+                        transition: 0.3s;
+                    }
+                }
+                .blockloc{
+                    height: 58rem;
+                }
+                .advantages-of__ordering{
+                    border: 1px solid #E1E1E1;
+                    height: 165rem;
+                    border-radius: 5px;
+                    padding: 2.1rem 0.8rem;
+                    .title-ordering{
+                        font-size: 2.4rem;
+                        font-weight: 700;
+                        color: $clr-primary-blue;
+                        text-align: center;
+                        margin-bottom: 3rem;
+                    }
+                    .words{
+                        font-size: 1.6rem;
+                        font-weight: 300;
+                        margin-bottom: 3rem;
+                        &:hover{
+                            color: red;
+                            transition: 0.3s;
+                        }
+                    }
+                    .ordering-line{
+                        display: block;
+                        .line-card{
+                            margin-left: 0rem;
+                            width: 31.2rem;
+                            img{
+                                margin-left: 15.2rem;
+                                margin-bottom: 1.5rem;
+                            }
+                            .card-text{
+                                font-size: 1.6rem;
+                                font-weight: 300;
+                                line-height: 2.5rem;
+                                &:hover{
+                                    color: red;
+                                    transition: 0.3s;
+                                }
+                            }
+                        }
+                    }
+                    .ordering-line_two{
+                        display: block;
+                        margin-top: 1rem;
+                        margin-left: 0rem;
+                        .line-card{
+                            margin-left: 0rem;
+                            width: 31.2rem;
+                            img{
+                                margin-left: 15.2rem;
+                                margin-bottom: 1.5rem;
+                            }
+                            .card-text{
+                                font-size: 1.6rem;
+                                font-weight: 300;
+                                line-height: 2.5rem;
+                                &:hover{
+                                    color: red;
+                                    transition: 0.3s;
+                                }
+                            }
+                        }
+                    }
+                    .ordering-texts{
+                        font-size: 1.6rem;
+                        font-weight: 300;
+                        line-height: 2.5rem;
+                        margin-top: 2rem;
+                        &:hover{
+                            color: red;
+                            transition: 0.3s;
+                        }
+                    }
+                }
+    
+                .price-ordering{
+                    border: 1px solid #E1E1E1;
+                    margin-top: 5rem;
+                    height: 70rem;
+                    padding: 2.4rem 0.8rem;
+                    border-radius: 5px;
+                    &:hover{
+                        scale: (1.02);
+                        transition: 0.4s;
+                        box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.90);
+                        -moz-box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.00);
+                        box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.90);
+                    }
+                    .price-title{
+                        font-size: 2.4rem;
+                        font-weight: 700;
+                        color: $clr-primary-blue;
+                        text-align: center;
+                        margin-bottom: 3rem;
+                    }
+                    .price-text{
+                        font-size: 1.6rem;
+                        font-weight: 300;
+                        line-height: 2.5rem;
+                        margin-top: 2rem;
+                        &:hover{
+                            color: red;
+                            transition: 0.3s;
+                        }
+                    }
+                    .price-text__two{
+                        font-size: 1.6rem;
+                        font-weight: 300;
+                        line-height: 2.5rem;
+                        margin-top: 1rem;
+                        &:hover{
+                            color: red;
+                            transition: 0.3s;
+                        }
+                    }
+                }
+    
+                .main-stages{
+                    border: 1px solid #E1E1E1;
+                    margin-top: 5rem;
+                    height: 333rem;
+                    padding: 2.1rem 0.8rem;
+                    border-radius: 5px;
+                    &:hover{
+                        scale: (1.02);
+                        transition: 0.4s;
+                        box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.90);
+                        -moz-box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.00);
+                        box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.90);
+                    }
+                    .stages-title{
+                        @include title();
+                    }
+                    .stages-words{
+                        @include text-info();
+                    }
+                    .stages-title__min{
+                        @include title-min();
+                    }
+                    .stages-word{
+                        margin-top: 2rem;
+                        font-size: 1.6rem;
+                        font-weight: 300;
+                        &:hover{
+                            color: red;
+                            transition: 0.3s;
+                        }
+                    }
+                    .stages-word__line{
+                        margin-top: 1rem;
+                        @include flex-row-center();
+                        .box{
+                            width: 1.2rem;
+                            height: 1.2rem;
+                            background: $clr-primary-blue;
+                            border-radius: 1rem;
+                        }
+                        .bop-word{
+                            margin-left: 1rem;
+                            @include text-info();
+                        }
+                    }
+                    .stages-words__two{
+                        @include text-info();
+                        margin-top: 1rem;
+                    }
+                    .title-text{
+                        @include text-info();
+                        margin-top: 2rem;
+                    }
+                }
+    
+                .how-to__order{
+                    border: 1px solid #E1E1E1;
+                    margin-top: 5rem;
+                    height: 59rem;
+                    padding: 2.1rem 0.8rem;
+                    border-radius: 5px;
+                    &:hover{
+                        scale: (1.02);
+                        transition: 0.4s;
+                        box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.90);
+                        -moz-box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.00);
+                        box-shadow: 0px -10px 62px -28px rgba(0,0,0,0.90);
+                    }
+                    .order-title{
+                        @include title();
+                    }
+                    .text{
+                        @include text-info();
+                    }
+                    .text-two{
+                        @include text-info();
+                        margin-top: 1rem;
+                    }
+                }
+                .block{
+                    height: 7.5rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,94 @@
+@import '../scss-utils/mixin';
+@import '../scss-utils/variables';
+
+.hero {
+    .hero_row {
+        @include flex-row-start;
+        column-gap: $gap-mediumxx;
+
+        margin-bottom: 3.8rem;
+
+        @include respond-to('tablet') {
+            column-gap: $gap-small7xR;
+        }
+
+        @include respond-to('phone') {
+            @include flex-column;
+            row-gap: $gap-small;
+            margin-left: $margin-mediumxx;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .hero_element {
+            .hero_element-top {
+                width: 23.2rem;
+                height: 7.6rem;
+                background: $clr-primary-blue;
+                border-radius: $radius-xsmall;
+                -webkit-border-radius: $radius-xsmall;
+                -moz-border-radius: $radius-xsmall;
+                -ms-border-radius: $radius-xsmall;
+                -o-border-radius: $radius-xsmall;
+                @include flex-aligning;
+
+                color: $clr-white;
+                font-size: $font-size-regularx;
+                font-weight: 700;
+
+                margin-bottom: $margin-xsmall;
+            }
+
+            .hero_list {
+                @include flex-column;
+                row-gap: $gap-xxsmall;
+
+                margin-bottom: $margin-regular1xR;
+
+                .hero_item {
+                    margin-left: $margin-xsmall4xR;
+
+                    color: $clr-black;
+                    font-size: $font-size-deflaut;
+                    font-weight: 300;
+                    position: relative;
+
+                    transition: $transition-fast;
+                    -webkit-transition: $transition-fast;
+                    -moz-transition: $transition-fast;
+                    -ms-transition: $transition-fast;
+                    -o-transition: $transition-fast;
+
+                    &:hover {
+                        transform: translateX(1rem);
+                        -webkit-transform: translateX(1rem);
+                        -moz-transform: translateX(1rem);
+                        -ms-transform: translateX(1rem);
+                        -o-transform: translateX(1rem);
+                    }
+
+                    &:active {
+                        color: $clr-primary-red;
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: -2.4rem;
+                        top: .3rem;
+                        width: 1.2rem;
+                        height: 1.2rem;
+                        background: $clr-primary-blue;
+                        border-radius: $radius-large;
+                        -webkit-border-radius: $radius-large;
+                        -moz-border-radius: $radius-large;
+                        -ms-border-radius: $radius-large;
+                        -o-border-radius: $radius-large;
+                    }
+                }
+            }
+        }
+    }
+}

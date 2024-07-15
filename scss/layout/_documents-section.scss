@@ -1,0 +1,77 @@
+@import '../scss-utils/mixin';
+@import '../scss-utils/variables';
+.documents-section{
+    margin-bottom: $margin-small;
+    .documents-general{
+        @include flex-sapce-bw();
+        .documents-block{
+            &:active{
+                animation-name: block-rotate;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                animation-direction: alternate;
+            }
+            background-color: $clr-white;
+            width: 49%;
+            border: 1px solid #e1e1e1;
+            border-radius: 1rem;
+            padding: $padding-xsmall;
+            .documents-line{
+                @include flex-row();
+                margin-bottom: $margin-regular;
+                .doc-img{
+                    margin-right: $margin-small;
+                    &:hover{
+                        animation-name: elastic;
+                        animation-duration: 1s;
+                        animation-iteration-count: infinite;
+                        animation-timing-function: ease-in-out;
+                        animation-direction: alternate;
+                    }
+                }
+                .documents-line-title{
+                    font-weight: 700;
+                    font-size: $font-size-xmedium;
+                    color: $clr-primary-blue;
+                }
+            }
+            ul{
+                padding: 1rem;
+                .doc-li{
+                    margin-bottom: $margin-xsmall;
+                    list-style: disc;
+                    font-weight: 500;
+                    font-size: $font-size-deflaut;
+                    &:hover{
+                        transform: translateX(1rem);
+                        color: $clr-primary-blue;
+                    }
+                }
+            }
+            .documents-line-text{
+                font-weight: 300;
+                font-size: $font-size-deflaut;
+                line-height: 150%;
+            }
+        }
+        .ques{
+            background-color: #ffffff39;
+        }
+    }
+}
+@media (max-width:834px){
+    .documents-section{
+        .documents-general{
+            display: flex;
+            flex-direction: column;
+            .documents-block{
+                width: 100%;
+                margin-bottom: $margin-xsmall;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+@import '../scss-utils/mixin';
+@import '../scss-utils/variables';
+
+.hero {
+    background: url('../img/images/city.png');
+    position: relative;
+
+    padding-top: $padding-mediumxxx8xR;
+    margin-bottom: $margin-medium;
+    
+    height: 50.8rem;
+
+    @include gradientAfter;
+
+    @include respond-to('phone') {
+        padding-top: $padding-xxsmall2xR;
+        height: 43rem;
+    }
+
+    .container {
+        .hero_content {
+            padding: $padding-small2xR $padding-xxsmall4xR;
+            background: $clr-white;
+            border-radius: $radius-xsmall;
+            -webkit-border-radius: $radius-xsmall;
+            -moz-border-radius: $radius-xsmall;
+            -ms-border-radius: $radius-xsmall;
+            -o-border-radius: $radius-xsmall;
+            max-width: 58rem;
+            height: 34.9rem;
+
+            @include respond-to('phone') {
+                height: 40.3rem;
+            }
+
+            .hero_title {
+                line-height: 3.2rem;
+
+                max-width: 46.6rem;
+                margin-bottom: $margin-verysmall9xR;
+            }
+
+            .hero_text {
+                color: $clr-black;
+                font-size: $font-size-deflaut;
+                line-height: 2.4rem;
+
+                max-width: 55.2rem;
+                margin-bottom: $margin-xsmall;
+                @include respond-to('phone') {
+                    font-size: $font-size-small3x;
+                    margin-bottom: $margin-xxsmall5xR;
+                }
+            }
+        }
+    }
+}

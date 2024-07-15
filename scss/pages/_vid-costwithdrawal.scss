@@ -1,0 +1,122 @@
+@import '../scss-utils/mixin';
+@import '../scss-utils/variables';
+
+.vid {
+    margin-bottom: $margin-mediumx;
+
+    .container {
+        .vid_block {
+            padding: $padding-medium7xR 9.9rem $padding-medium8xR 30rem;
+            background: $clr-primary-blue;
+            border-radius: $radius-xsmall;
+            -webkit-border-radius: $radius-xsmall;
+            -moz-border-radius: $radius-xsmall;
+            -ms-border-radius: $radius-xsmall;
+            -o-border-radius: $radius-xsmall;
+
+            margin-bottom: $margin-mediumx;
+
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 6rem;
+                bottom: 0;
+                width: 14.8rem;
+                height: 23.8rem;
+                background: url(../img/images/mother__angel.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .vid_title {
+                color: $clr-white;
+                font-size: $font-size-medium;
+                font-weight: 500;
+
+                margin-bottom: $margin-xxsmall6xR;
+            }
+
+            .vid_text {
+                color: $clr-white;
+                font-size: $font-size-deflaut;
+                font-weight: 300;
+            }
+        }
+
+        .vid_video {
+            height: 60rem;
+            background: url('../img/images/candle.png');
+            padding-top: 21.1rem;
+
+            @include flex-column-center;
+
+            .vid_video-btn {
+                margin-bottom: $margin-small1xR;
+            }
+
+            .vid_video-title {
+                color: $clr-white;
+                font-size: $font-size-medium;
+                font-weight: 700;
+
+                margin-bottom: $margin-mediumx1xR;
+            }
+
+            .vid_video-text {
+                color: $clr-white;
+                font-size: $font-size-medium;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .vid {
+        margin-bottom: $margin-medium;
+
+        .container {
+            .vid_block {
+                padding: $padding-xsmall2xR 0 0 $padding-xsmall;
+                height: 34.2rem;
+
+                &::after {
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    -webkit-transform: translate(-50%, 0);
+                    -moz-transform: translate(-50%, 0);
+                    -ms-transform: translate(-50%, 0);
+                    -o-transform: translate(-50%, 0);
+                    height: 21rem;
+                }
+
+                .vid_title {
+                    font-size: $font-size-xmedium;
+                    line-height: 2.4rem;
+                    max-width: 31rem;
+
+                    margin-bottom: $margin-verysmall9xR;
+                }
+
+                .vid_text {
+                    text-align: center;
+                    margin-right: $margin-xsmall;
+                }
+            }
+
+            .vid_video {
+                background-position: center;
+                padding-top: $padding-mediumxxx1xR;
+                height: 48rem;
+                text-align: center;
+                .vid_video-title {
+                    font-size: $font-size-xmedium;
+                    line-height: 3.2rem;
+                    margin-bottom: $margin-xsmall;
+                }
+            }
+        }
+    }
+}

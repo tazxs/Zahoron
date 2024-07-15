@@ -1,0 +1,47 @@
+@import '../scss-utils/mixin';
+@import '../scss-utils/variables';
+.sending-section{
+    margin-bottom: $margin-regular;
+    .sending-line{
+        @include flex-sapce-bw();
+        margin-bottom: $margin-small;
+        .sending-image{
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            .sending-img{
+                &:hover{
+                    animation-name: shakes;
+                    animation-duration: 2s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: linear   ;
+                    animation-direction: alternate;
+                    transition: box-shadow 0.4s ease-in-out;
+                }
+            }
+        }
+        .sending-text-wrap{
+            width: 50%;
+            .sending-title{
+                font-weight: 700;
+                font-size: $font-size-regular;
+                margin-bottom: $margin-xxsmall6xR;
+            }
+            .sending-text{
+                font-weight: 300;
+                font-size: $font-size-deflaut;
+                line-height: 156%;
+            }
+        }
+    }
+}
+@media (max-width:834px){
+    .sending-section{
+        .sending-line{
+            .sending-image{
+                width: 45%;
+                height: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,66 @@
+@import '../scss-utils/mixin';
+@import '../scss-utils/variables';
+
+.hero {
+    position: relative;
+    padding-top: $padding-regular3xR;
+    padding-bottom: 13.9rem;
+
+    .hero_edit-btn {
+        transition: $transition-fast;
+        -webkit-transition: $transition-fast;
+        -moz-transition: $transition-fast;
+        -ms-transition: $transition-fast;
+        -o-transition: $transition-fast;
+        @include flex-row-center;
+        column-gap: $gap-verysmall8xR;
+
+        color: $clr-primary-blue;
+        font-size: $font-size-regular;
+        font-weight: 500;
+
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        &:hover {
+            color: $clr-primary-red;
+        }
+
+        &:active {
+            color: $clr-primary-red-2;
+        }
+    }
+
+    .hero_last-links {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        @include flex-column-center;
+
+        .hero_btn {
+            margin-bottom: $margin-medium;
+        }
+
+        .hero_btn-last {
+            color: $clr-black;
+            font-size: $font-size-deflaut;
+            font-weight: 500;
+            opacity: 50%;
+            transition: $transition-fast;
+            -webkit-transition: $transition-fast;
+            -moz-transition: $transition-fast;
+            -ms-transition: $transition-fast;
+            -o-transition: $transition-fast;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &:active {
+                @include click;
+            }
+        }
+    }
+}
